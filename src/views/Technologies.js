@@ -18,17 +18,15 @@ export default function Technologies() {
 
   return (
     <main>
-      <section>
-        <header>Technologies</header>
-        <hr />
-        {!techForm
-          ? <Button color='info' onClick={handleTechClick}>Add Technology</Button>
-          : <div>
-              <Button color='info' onClick={handleTechClick}>Close Form</Button>
-            <TechnologyForm setTechnologies={setTechnologies} setTechForm={setTechForm}/>
+      <header>Technologies</header>
+      <hr />
+      {!techForm
+        ? <Button color='info' onClick={handleTechClick}>Add Technology</Button>
+        : <div>
+          <Button color='info' onClick={handleTechClick}>Close Form</Button>
+          <TechnologyForm setTechnologies={setTechnologies} setTechForm={setTechForm}/>
             </div>
         }
-        </section>
         <section className="techContainer">
         <div className="technlogyContainer">
           {technologies.map((technology) => (
@@ -41,7 +39,7 @@ export default function Technologies() {
               setTechForm={setTechForm}
               firebaseKey={technology.firebaseKey}
             />
-          ))};
+          ))}
         </div>
       </section>
     </main>

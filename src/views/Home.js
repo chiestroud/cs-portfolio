@@ -4,12 +4,13 @@ import { Button } from 'reactstrap';
 
 export default function Home() {
   return (
-    <section className='container'>
-      <header>Chie Stroud</header>
-      <hr />
-      <h6>Full Stack Web Developer</h6>
-      <Button tag={Link} to='./about' color='info' className='text-white'>About Me</Button>
-      <Button tag={Link} to='./contact' color='info' className='text-white'>Contact</Button>
+    <section className="aboutMe">
+      <header className="title">Chie Stroud</header>
+      <h6 className="jobTitle">Full Stack Web Developer</h6>
+      <div className="btnContainer">
+        <Button tag={Link} to='./about' id='btn'>About Me</Button>
+        <Button tag={Link} to='./contact' id='btn'>Contact</Button>
+      </div>
     </section>
   );
 }

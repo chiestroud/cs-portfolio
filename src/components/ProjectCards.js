@@ -36,7 +36,7 @@ export default function ProjectCards({
             <CardTitle tag='h5'>{title}</CardTitle>
             <CardText>{description}</CardText>
             <CardText>{technologiesUsed}</CardText>
-            <a href={githubUrl} target='_blank' rel="noreferrer">Link to GitHub</a>
+            <a href={githubUrl} target='_blank' rel="noreferrer" className='m-1'>Link to GitHub</a>
             <a href={url} target='_blank' rel="noreferrer">Link to Deployed Site</a>
           </CardBody>
         : ''

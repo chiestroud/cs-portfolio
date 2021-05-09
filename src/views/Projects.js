@@ -18,15 +18,13 @@ export default function Projects() {
 
   return (
     <main>
-      <section>
-        {!showForm
-          ? <Button color='info' onClick={handleClick}>Add Project</Button>
-          : <div>
-            <Button color='info' onClick={handleClick}>Close Form</Button>
-            <ProjectForm setProjects={setProjects} setShowForm={setShowForm}/>
-          </div>
-        }
-      </section>
+      {!showForm
+        ? <Button color='info' onClick={handleClick}>Add Project</Button>
+        : <div>
+          <Button color='info' onClick={handleClick}>Close Form</Button>
+          <ProjectForm setProjects={setProjects} setShowForm={setShowForm} />
+        </div>
+      }
       <section>
         <header>Projects</header>
         <hr />
@@ -42,6 +40,7 @@ export default function Projects() {
               title={project.title}
               url={project.url}
               setProjects={setProjects}
+              setShowForm={setShowForm}
             />
           ))}
         </div>

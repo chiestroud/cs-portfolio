@@ -21,7 +21,6 @@ export default function TechnologyCards({
   };
 
   return (
-    <div>
       <Card key={firebaseKey} className='m-4 techCard' >
         <CardImg id="technologyImg"top width="100%" src={logo} alt={technologyName} />
         <Button color="primary" size="sm" onClick={() => handleClick('edit')}>
@@ -39,7 +38,6 @@ export default function TechnologyCards({
         }
         <Button color="danger" size="sm" onClick={() => handleClick('delete')}>Delete</Button>
       </Card>
-    </div>
   );
 }
 
