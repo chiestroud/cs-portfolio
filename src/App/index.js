@@ -8,7 +8,7 @@ import Routes from '../helpers/Routes';
 import './App.scss';
 
 function App({
-  setProjects, setTechnologies
+  setProjects, setTechnologies, setTechForm
 }) {
   const [user, setUser] = useState(null);
 
@@ -35,6 +35,7 @@ function App({
         user={user}
         setProjects={setProjects}
         setTechnologies={setTechnologies}
+        setTechForm={setTechForm}
       />
     </Router>
   );
@@ -45,7 +46,8 @@ App.propTypes = {
   showForm: PropTypes.bool,
   setShowForm: PropTypes.func,
   handleClick: PropTypes.func,
-  setTechnologies: PropTypes.func
+  setTechnologies: PropTypes.func,
+  setTechForm: PropTypes.func
 };
 
 export default App;

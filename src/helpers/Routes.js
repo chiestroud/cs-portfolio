@@ -9,7 +9,7 @@ import NssJourney from '../views/NssJourney';
 import Projects from '../views/Projects';
 import Technologies from '../views/Technologies';
 
-export default function Routes({ setProjects, setTechnologies }) {
+export default function Routes({ setProjects, setTechnologies, setTechForm }) {
   return (
     <div>
       <Switch>
@@ -17,7 +17,7 @@ export default function Routes({ setProjects, setTechnologies }) {
         <Route path='/about' component={About} />
         <Route path='/nss' component={NssJourney} />
         <Route path='/projects' component={() => <Projects setProjects={setProjects}/>} />
-        <Route path='/technologies' component={() => <Technologies setTechnologies={setTechnologies}/>} />
+        <Route path='/technologies' component={() => <Technologies setTechnologies={setTechnologies} setTechForm={setTechForm}/>} />
         <Route path='/contact' component={Contact} />
         <Route path='*' component={NotFound} />
       </Switch>
@@ -27,5 +27,6 @@ export default function Routes({ setProjects, setTechnologies }) {
 
 Routes.propTypes = {
   setProjects: PropTypes.func,
-  setTechnologies: PropTypes.func
+  setTechnologies: PropTypes.func,
+  setTechForm: PropTypes.func
 };

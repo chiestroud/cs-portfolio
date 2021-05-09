@@ -25,7 +25,7 @@ export default function Technologies() {
           ? <Button color='info' onClick={handleTechClick}>Add Technology</Button>
           : <div>
               <Button color='info' onClick={handleTechClick}>Close Form</Button>
-            <TechnologyForm setTechnologies={setTechnologies}/>
+            <TechnologyForm setTechnologies={setTechnologies} setTechForm={setTechForm}/>
             </div>
         }
         </section>
@@ -38,6 +38,8 @@ export default function Technologies() {
               logo={technology.logo}
               technologyName={technology.technologyName}
               setTechnologies={setTechnologies}
+              setTechForm={setTechForm}
+              firebaseKey={technology.firebaseKey}
             />
           ))};
         </div>

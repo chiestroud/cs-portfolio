@@ -2,7 +2,7 @@
 @import 'variables';
 
 body {
-  background-color: $favColor;
+  color: $favColor;
 }
 
 div.projectsContainer {
@@ -43,4 +43,22 @@ section.techContainer {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+a.navbar-brand {
+  color: $favColor;
+  font-weight: bold;
+}
+
+a.navbar-brand:hover {
+  color: $secondaryColor;
+}
+
+a.nav-link {
+  color: $favColor;
+  font-weight: bold;
+}
+
+a.nav-link:hover {
+  color: $secondaryColor;
 }

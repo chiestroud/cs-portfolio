@@ -3,12 +3,15 @@ import PropTypes from 'prop-types';
 import {
   Form, FormGroup, Label, Input, Button
 } from 'reactstrap';
-import { addTechnology } from '../helpers/data/technologyData';
+import { addTechnology, updateTechnology } from '../helpers/data/technologyData';
 
-export default function TechnologyForm({ setTechnologies }) {
+export default function TechnologyForm({
+  setTechnologies, setTechForm, logo, firebaseKey, technologyName, setEditing
+}) {
   const [technology, setTechnology] = useState({
-    logo: '',
-    technologyName: ''
+    logo: logo || '',
+    technologyName: technologyName || '',
+    firebaseKey: firebaseKey || ''
   });
 
   const handleInputChange = (e) => {
@@ -20,7 +23,13 @@ export default function TechnologyForm({ setTechnologies }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    addTechnology(technology).then((technologiesArray) => setTechnologies(technologiesArray));
+    if (technology.firebaseKey) {
+      updateTechnology(technology).then((technologiesArray) => setTechnologies(technologiesArray));
+      setEditing(false);
+    } else {
+      addTechnology(technology).then((technologiesArray) => setTechnologies(technologiesArray));
+      setTechForm(false);
+    }
   };
 
   return (
@@ -57,5 +66,10 @@ export default function TechnologyForm({ setTechnologies }) {
 }
 
 TechnologyForm.propTypes = {
-  setTechnologies: PropTypes.func
+  setTechnologies: PropTypes.func,
+  setTechForm: PropTypes.func,
+  logo: PropTypes.string,
+  firebaseKey: PropTypes.string,
+  technologyName: PropTypes.string,
+  setEditing: PropTypes.func
 };

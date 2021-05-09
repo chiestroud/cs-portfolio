@@ -18,4 +18,18 @@ const addTechnology = (technology) => new Promise((resolve, reject) => {
     }).catch((err) => reject(err));
 });
 
-export { getTechnologies, addTechnology };
+const updateTechnology = (technology) => new Promise((resolve, reject) => {
+  axios.patch(`${dbUrl}/technology/${technology.firebaseKey}.json`, technology)
+    .then(() => getTechnologies().then(resolve))
+    .catch((err) => reject(err));
+});
+
+const deleteTechnology = (firebaseKey) => new Promise((resolve, reject) => {
+  axios.delete(`${dbUrl}/technology/${firebaseKey}.json`)
+    .then(() => getTechnologies().then((technologiesArray) => resolve(technologiesArray)))
+    .catch((err) => reject(err));
+});
+
+export {
+  getTechnologies, addTechnology, deleteTechnology, updateTechnology
+};
