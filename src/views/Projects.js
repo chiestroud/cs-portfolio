@@ -23,7 +23,7 @@ export default function Projects() {
           ? <Button color='info' onClick={handleClick}>Add Project</Button>
           : <div>
             <Button color='info' onClick={handleClick}>Close Form</Button>
-            <ProjectForm />
+            <ProjectForm setProjects={setProjects} setShowForm={setShowForm}/>
           </div>
         }
       </section>

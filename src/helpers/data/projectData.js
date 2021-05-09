@@ -19,8 +19,33 @@ const addProjects = (project) => new Promise((resolve, reject) => {
     .then((response) => {
       const body = { firebaseKey: response.data.name };
       axios.patch(`${dbUrl}/projects/${response.data.name}.json`, body)
-        .then(() => resolve(console.warn('project added', project)));
+        .then(() => {
+          getProjects().then((projectsArray) => resolve(projectsArray));
+        });
     }).catch((err) => reject(err));
 });
 
-export { getProjects, addProjects };
+const updateProject = (project) => new Promise((resolve, reject) => {
+  axios.patch(`${dbUrl}/projects/${project.firebaseKey}.json`, project)
+    .then(() => getProjects().then(resolve))
+    .catch((err) => reject(err));
+});
+
+const deleteProject = (firebaseKey) => new Promise((resolve, reject) => {
+  axios.delete(`${dbUrl}/projects/${firebaseKey}.json`)
+    .then(() => getProjects().then((projectsArray) => resolve(projectsArray)))
+    .catch((err) => reject(err));
+});
+
+export {
+  getProjects, addProjects, updateProject, deleteProject
+};
+
+// const addProjects = (project) => new Promise((resolve, reject) => {
+//   axios.post(`${dbUrl}/projects.json`, project)
+//     .then((response) => {
+//       const body = { firebaseKey: response.data.name };
+//       axios.patch(`${dbUrl}/projects/${response.data.name}.json`, body)
+//         .then(() => resolve(console.warn('project added', project)));
+//     }).catch((err) => reject(err));
+// });

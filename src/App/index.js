@@ -1,14 +1,16 @@
 import firebase from 'firebase/app';
 import 'firebase/auth';
+import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import NavBar from '../components/NavBar';
 import Routes from '../helpers/Routes';
 import './App.scss';
 
-function App() {
+function App({
+  setProjects, setTechnologies
+}) {
   const [user, setUser] = useState(null);
-  console.warn(user);
 
   useEffect(() => {
     firebase.auth().onAuthStateChanged((authed) => {
@@ -29,9 +31,21 @@ function App() {
   return (
     <Router>
       <NavBar user={user}/>
-      <Routes user={user}/>
+      <Routes
+        user={user}
+        setProjects={setProjects}
+        setTechnologies={setTechnologies}
+      />
     </Router>
   );
 }
+
+App.propTypes = {
+  setProjects: PropTypes.func,
+  showForm: PropTypes.bool,
+  setShowForm: PropTypes.func,
+  handleClick: PropTypes.func,
+  setTechnologies: PropTypes.func
+};
 
 export default App;

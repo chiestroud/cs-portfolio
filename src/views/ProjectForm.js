@@ -1,24 +1,43 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import {
   Button, Form, FormGroup, Label, Input, FormText
 } from 'reactstrap';
-import { addProjects } from '../helpers/data/projectData';
+import { addProjects, updateProject } from '../helpers/data/projectData';
 
-export default function ProjectForm() {
+export default function ProjectForm({
+  firebaseKey,
+  description,
+  githubUrl,
+  screenshot,
+  technologiesUsed,
+  title,
+  url,
+  setProjects,
+  available,
+  setShowForm,
+  setEditing
+}) {
   const [project, setProject] = useState({
-    firebaseKey: '',
-    title: '',
-    available: false,
-    description: '',
-    githubUrl: '',
-    screenshot: '',
-    url: '',
-    technologiesUsed: ''
+    firebaseKey: firebaseKey || '',
+    title: title || '',
+    available: available || false,
+    description: description || '',
+    githubUrl: githubUrl || '',
+    screenshot: screenshot || '',
+    url: url || '',
+    technologiesUsed: technologiesUsed || ''
   });
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    addProjects(project);
+    if (project.firebaseKey) {
+      updateProject(project).then((projectArray) => setProjects(projectArray));
+      setEditing(false);
+    } else {
+      addProjects(project).then((projectArray) => setProjects(projectArray));
+      setShowForm(false);
+    }
   };
   const handleInputChange = (e) => {
     setProject((prevState) => ({
@@ -30,6 +49,7 @@ export default function ProjectForm() {
   return (
     <Form
       id="addProjectForm"
+      autoComplete='off'
       onSubmit={handleSubmit}
       className='container'>
       <FormGroup>
@@ -104,7 +124,7 @@ export default function ProjectForm() {
               type="radio"
               name="available"
               id="available"
-              value={project.available}
+              checked={project.available}
               onChange={handleInputChange}
             />{' '}
             Available
@@ -115,3 +135,17 @@ export default function ProjectForm() {
     </Form>
   );
 }
+
+ProjectForm.propTypes = {
+  firebaseKey: PropTypes.string,
+  description: PropTypes.string,
+  githubUrl: PropTypes.string,
+  screenshot: PropTypes.string,
+  technologiesUsed: PropTypes.string,
+  title: PropTypes.string,
+  url: PropTypes.string,
+  setProjects: PropTypes.func,
+  available: PropTypes.any,
+  setShowForm: PropTypes.func,
+  setEditing: PropTypes.func
+};
