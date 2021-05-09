@@ -2,5 +2,63 @@
 @import 'variables';
 
 body {
-  background-color: $favColor;
+  color: $favColor;
+}
+
+div.projectsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0;
+}
+
+div.card {
+  flex-basis: 25%;
+  object-fit: scale-down;
+  font-size: 1.5vw;
+}
+
+#projectImg {
+  width: 100%;
+  height: 40%;
+  object-fit: scale-down;
+}
+
+div.techCard {
+  display: flex;
+  flex-wrap: wrap;
+  width: 10%;
+  height: 200px;
+}
+
+img#technologyImg {
+  width: 80px;
+}
+
+div.technlogyContainer {
+  display: flex;
+}
+
+section.techContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+a.navbar-brand {
+  color: $favColor;
+  font-weight: bold;
+}
+
+a.navbar-brand:hover {
+  color: $secondaryColor;
+}
+
+a.nav-link {
+  color: $favColor;
+  font-weight: bold;
+}
+
+a.nav-link:hover {
+  color: $secondaryColor;
 }
