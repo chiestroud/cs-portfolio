@@ -30,7 +30,13 @@ export default function about() {
               <img className="profileImg" src='https://lh3.googleusercontent.com/47BVcTtzDGv3oT8r6Oad4aMHqL6gw4bHQHN5Y_1W3t2Je7M5B-cdkENW_T1_YuwKy4zUjJqHvb66eRSgxpAejaVu3Qa_SAVJpEved2WuB6mkEvtNp6SdPm8CzrzZzrYIKYw1-xdu4kEI1pWjQjAknItjxPrsGHbgraqvv03PV3yfmeJPAckrDe14-7D91foTkoJXLLGEVsvzrSaR9MPOrc8imz-w8fSMMXeO4V7uifPG-d-0u45mmmp7zXsLMuWix86eqcoCsOa0tigLAa1voS6QNwVkFyzf_EzzVaSd0tBPasQhIuS1KvKWC7hQRuRGEvoCEe7_JAjsUj5AyI4WQ41tabMvEJR3Q8qLqajAqSrGWCjJHopa5IuLVorJbOR4mXEjym0Qf1PUei5v6TWxV2V5QVbw1Dk_Mv6HskVx36Ez1aCDN0P9yQ-ByhlSPn0Nlmi6KteocSsC_RtIW24qfARNjxL_hQKIixMUGYsDiD-QzqWXOCVrllb0JjIfNqeSoO0d3LeYG-9Uc2woTTwl-x1dZHWHP1LvYOM2yVO2Gc57FWDa2hQNqQKgARjbvu_o72guWUnvkhNQ23t6wQ8TgoHB78fsTWDuOLMbstcXBWx57HwscIVwplu8C4KMRn1HXcKkxXuMVGRROcho6JGHs1A6Oc1Sav8vH5UWk2Tc3xyR-oZVgF3tPZraf84reK5yuueyuW_Hr9UlyX3aZHQ2MAXu=w1059-h795-no?authuser=0' />
            </div>
           <div className="splitMain">
-            <p className="introduction">I love driving cars! My beautiful BRZ!</p>
+            <p className="introduction">Some of the things I like to do during my free time.</p>
+            <ul className="introduction-back">
+              <li>Play games (computer, board, and card games)</li>
+              <li>Watch movies</li>
+              <li>Find new restaurants</li>
+              <li>Drive my beautiful car in the picture left</li>
+            </ul>
             <Button id="aboutBtn" onClick={handleClick}>Flip Me</Button>
             </div>
           </div>

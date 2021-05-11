@@ -7,7 +7,7 @@ export default function NssJourney() {
   return (
     <section>
       <div className="head">
-        <header className="headerContainer">My Learning Journey in NSS</header>
+        <header className="title">My Learning Journey in NSS</header>
         <p>I started Web Developer Bootcamp in Nashville Software School in January 2021. Apart from my projects built during class, I built my journal site every month to implement what I have learned in class as well as to see my improvement each month. At the beginning of each month, I spent a couple of hours building journal page using all the possible knowledge I have at that level.</p>
       </div>
       <VerticalTimeline>
