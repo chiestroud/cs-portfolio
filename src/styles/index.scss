@@ -178,9 +178,25 @@ a.nav-link:hover {
 
 @media screen and (max-width: 800px) {
   .mainContainer {
-    display: flex;
-    margin: 2%;
-    flex-wrap: wrap;
-    justify-content: center;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    justify-items: center;
+  }
+  .aboutMe {
+    margin-top: 2%;
+    font-size: 3vw;
+  }
+  p.introduction {
+    align-self: stretch;
+    align-items: center;
+  }
+  div.react-card-front {
+    text-align: center;
+    padding: 0%;
+  }
+  div.react-card-back {
+    text-align: center;
+    padding-top: 2%;
   }
 }
