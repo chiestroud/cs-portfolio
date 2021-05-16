@@ -19,7 +19,7 @@ const NavBar = ({ user }) => {
 
   return (
     <div id="navContainer">
-      <Navbar expand="md">
+      <Navbar expand="md" fixed="top">
         <Link className='navbar-brand' to="/">Chie Stroud</Link>
         <NavbarToggler onClick={toggle}><i className="fas fa-hamburger"></i></NavbarToggler>
         <Collapse isOpen={isOpen} navbar>

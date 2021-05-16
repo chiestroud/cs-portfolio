@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { Button } from 'reactstrap';
+import PropTypes from 'prop-types';
 import TechnologyCards from '../components/TechnologyCards';
 import { getTechnologies } from '../helpers/data/technologyData';
 import TechnologyForm from './TechnologyForm';
 
-export default function Technologies() {
+export default function Technologies({ user }) {
   const [techForm, setTechForm] = useState(false);
   const [technologies, setTechnologies] = useState([]);
 
@@ -18,26 +19,28 @@ export default function Technologies() {
 
   return (
     <main>
-      <header>Technologies</header>
-      <hr />
+      <div className="head">
+        <header className="title">Technologies</header>
+      </div>
+      {user.uid === 'pMoZ9406o4PBfKiLZ5DZoIFpRrl1'
+        && <div>
       {!techForm
         ? <Button color='info' onClick={handleTechClick}>Add Technology</Button>
         : <div>
           <Button color='info' onClick={handleTechClick}>Close Form</Button>
           <TechnologyForm setTechnologies={setTechnologies} setTechForm={setTechForm}/>
-            </div>
-        }
+          </div>}
+      </div>
+}
         <section className="techContainer">
         <div className="technlogyContainer">
           {technologies.map((technology) => (
             <TechnologyCards
               key={technology.firebaseKey}
-              id={technology.firebaseKey}
-              logo={technology.logo}
-              technologyName={technology.technologyName}
               setTechnologies={setTechnologies}
               setTechForm={setTechForm}
-              firebaseKey={technology.firebaseKey}
+              user={user}
+              {...technology}
             />
           ))}
         </div>
@@ -45,3 +48,7 @@ export default function Technologies() {
     </main>
   );
 }
+
+Technologies.propTypes = {
+  user: PropTypes.any
+};
