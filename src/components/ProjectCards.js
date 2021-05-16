@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import {
-  Card, CardImg, CardBody, CardTitle, CardText, Button
+  Card, CardImg, CardBody, CardTitle, CardText, Button, CardLink,
 } from 'reactstrap';
 import ProjectForm from '../views/ProjectForm';
 import { deleteProject } from '../helpers/data/projectData';
@@ -16,7 +16,9 @@ export default function ProjectCards({
   url,
   setProjects,
   available,
+  user
 }) {
+  const [readMore, setReadMore] = useState(false);
   const [editing, setEditing] = useState(false);
   const handleClick = (type) => {
     if (type === 'edit') {
@@ -28,20 +30,28 @@ export default function ProjectCards({
 
   return (
     <Card body
-      className='card m-1 text-center'
+      className='card m-5 text-center'
       key={firebaseKey} id={firebaseKey}>
       {!editing
         ? <CardBody>
+            <CardTitle tag='h4'>{title}</CardTitle>
             <CardImg className='mx-auto d-block' id='projectImg' src={screenshot} alt={title} />
-            <CardTitle tag='h5'>{title}</CardTitle>
-            <CardText>{description}</CardText>
-            <CardText>{technologiesUsed}</CardText>
-            <a href={githubUrl} target='_blank' rel="noreferrer" className='m-1'>Link to GitHub</a>
-            <a href={url} target='_blank' rel="noreferrer">Link to Deployed Site</a>
+            <div className="cardBody">
+              <CardText>{readMore ? description : `${description.substring(0, 100)}...`
+                }
+              <CardLink className="readMore" onClick={() => setReadMore(!readMore)}>
+                {readMore ? ' Show less' : ' Read More'}
+              </CardLink>
+              </CardText>
+              <CardText>{technologiesUsed}</CardText>
+                <a href={githubUrl} target='_blank' rel="noreferrer" className='m-1'>GitHub</a>
+                <a href={url} target='_blank' rel="noreferrer">Deployed Site</a>
+            </div>
           </CardBody>
         : ''
       }
-      <div className='btnContainer'>
+      {user.uid === 'pMoZ9406o4PBfKiLZ5DZoIFpRrl1'
+        ? <div className='btnContainer'>
         <Button color='success' onClick={() => handleClick('edit')}>
           {editing ? 'Close Form' : 'Update Project'}</Button>
         {editing
@@ -59,6 +69,7 @@ export default function ProjectCards({
           />}
         <Button color='danger' onClick={() => handleClick('delete')}>Delete</Button>
       </div>
+        : ''}
     </Card>
   );
 }
@@ -72,5 +83,6 @@ ProjectCards.propTypes = {
   title: PropTypes.string,
   url: PropTypes.string,
   available: PropTypes.any,
-  setProjects: PropTypes.func
+  setProjects: PropTypes.func,
+  user: PropTypes.any
 };

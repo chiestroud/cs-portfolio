@@ -9,7 +9,8 @@ export default function TechnologyCards({
   technologyName,
   logo,
   setTechnologies,
-  setTechForm
+  setTechForm,
+  user
 }) {
   const [editing, setEditing] = useState(false);
   const handleClick = (type) => {
@@ -21,8 +22,10 @@ export default function TechnologyCards({
   };
 
   return (
-      <Card key={firebaseKey} className='m-4 techCard' >
-        <CardImg id="technologyImg"top width="100%" src={logo} alt={technologyName} />
+      <Card key={firebaseKey} className='techCard' >
+      <CardImg id="technologyImg" top width="100%" src={logo} alt={technologyName} />
+      {user.uid === 'pMoZ9406o4PBfKiLZ5DZoIFpRrl1'
+        && <div>
         <Button color="primary" size="sm" onClick={() => handleClick('edit')}>
           {editing ? 'Close' : 'Edit'}
         </Button>{' '}
@@ -36,7 +39,9 @@ export default function TechnologyCards({
           setTechnologies={setTechnologies}
         />
         }
-        <Button color="danger" size="sm" onClick={() => handleClick('delete')}>Delete</Button>
+      <Button color="danger" size="sm" onClick={() => handleClick('delete')}>Delete</Button>
+      </div>
+      }
       </Card>
   );
 }
@@ -46,5 +51,6 @@ TechnologyCards.propTypes = {
   technologyName: PropTypes.string,
   logo: PropTypes.string,
   setTechnologies: PropTypes.func,
-  setTechForm: PropTypes.func
+  setTechForm: PropTypes.func,
+  user: PropTypes.any
 };
