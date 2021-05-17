@@ -27,6 +27,7 @@ nav.navbar {
   display: flex;
   margin-top: 5%;
   flex-direction: column;
+  font-weight: bold;
 }
 
 .title {
@@ -35,12 +36,14 @@ nav.navbar {
   border-bottom: 2px solid $favColor;
   color: $favColor;
   letter-spacing: 12px;
+  font-weight: bold;
 }
 
 .jobTitle {
   align-self: center;
   color: $favColor;
   margin-top: 1%;
+  font-size: 1.5rem;
 }
 
 div.btnContainer {
@@ -153,6 +156,7 @@ div.projectsContainer {
   flex-wrap: wrap;
   justify-content: center;
   margin: 0;
+  color: #2B2D2F;
 }
 
 div.card {
@@ -211,6 +215,7 @@ main.contactSplit {
   display: flex;
   flex-wrap: wrap;
   height: 85vh;
+  width: 100%;
 }
 section.contactContainer {
   display: flex;
@@ -227,7 +232,7 @@ div.contactInfo {
 }
 
 .contactImg {
-  max-width: 500px;
+  max-width: 450px;
   padding: 2%;
   height: 90vh;
   object-fit: fill;

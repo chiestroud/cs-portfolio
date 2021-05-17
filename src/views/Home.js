@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <section className="aboutMe">
       <header className="title">Chie Stroud</header>
-      <h6 className="jobTitle">Full Stack Web Developer</h6>
+      <h1 className="jobTitle">Full Stack Web Developer</h1>
       <div className="btnContainer">
         <Button tag={Link} to='./about' id='btn'>About Me</Button>
         <Button tag={Link} to='./contact' id='btn'>Contact</Button>
