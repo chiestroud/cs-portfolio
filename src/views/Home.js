@@ -4,7 +4,7 @@ import { Button } from 'reactstrap';
 
 export default function Home() {
   return (
-    <section className="aboutMe">
+    <section className="aboutMe home">
       <header className="title">Chie Stroud</header>
       <h1 className="jobTitle">Full Stack Web Developer</h1>
       <div className="btnContainer">
