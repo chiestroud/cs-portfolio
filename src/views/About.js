@@ -32,12 +32,12 @@ export default function about() {
           <div className="splitMain">
             <p className="introduction">Some of the things I like to do during my free time.</p>
             <ul className="introduction-back">
-              <li>Play games (computer, board, and card games)</li>
-              <li>Watch movies</li>
-              <li>Find new restaurants</li>
-              <li>Drive my beautiful car in the picture left</li>
+              <li><i className="fas fa-car-side"></i> Computer games, board games, sudoku, and jigsaw puzzles</li>
+              <li><i className="fas fa-car-side"></i> Watch movies</li>
+              <li><i className="fas fa-car-side"></i> Find new restaurants</li>
+              <li><i className="fas fa-car-side"></i> Drive my beautiful car (see picture)</li>
             </ul>
-            <Button id="aboutBtn" onClick={handleClick}>Flip Me</Button>
+            <Button id="aboutBtn" onClick={handleClick}>Go Back</Button>
             </div>
           </div>
         }
