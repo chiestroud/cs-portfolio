@@ -8,7 +8,7 @@ export default function NssJourney() {
     <section>
       <div className="head">
         <header className="title">My Learning Journey in NSS</header>
-        <p className="mt-2">I was obsessed with learning web development and decided to join Web Developer Bootcamp in Nashville Software School in January 2021. I wanted to see my progress over the course of study so at the beginning of every month, I spent a couple of hours building a journal page and logged my daily school activity. Click the image to go to the deoloyed site.</p>
+        <p className="nssJourneyContent">I was obsessed with learning web development and decided to join Web Developer Bootcamp in Nashville Software School in January 2021. I wanted to see my progress over the course of study so at the beginning of every month, I spent a couple of hours building a journal page and logged my daily school activity. Click the image to go to the deoloyed site.</p>
       </div>
       <VerticalTimeline className='vertical-timeline vertical-timeline-custom-line'>
         <VerticalTimelineElement
@@ -16,6 +16,7 @@ export default function NssJourney() {
           contentStyle={{ background: '#dcdcdc', color: 'black' }}
           contentArrowStyle={{ borderRight: '7px solid  #dcdcdc' }}
           date="Jan 2021 ~ Jan 2022"
+          dateClassName="dateClass"
           iconStyle={{
             background: '#aca18c', color: '#fff', display: 'flex', justifyContent: 'center', alignItems: 'center'
           }}
