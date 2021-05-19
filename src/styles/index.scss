@@ -315,3 +315,39 @@ a.nav-link:hover {
     padding-top: 2%;
   }
 }
+
+@media screen and (max-width: 800px) {
+  nav.navbar.navbar-expand-md.fixed-top {
+    max-width: 100vw;
+  }
+  p.introduction {
+    padding: 0;
+  }
+  div.react-card-back {
+    padding: 0;
+    margin: 0;
+  }
+  div.react-card-front {
+    padding: 0;
+    margin: 0;
+  }
+  ul.introduction-back {
+    padding: 0;
+  }
+  img.profileImg {
+    width: 100%;
+  }
+  img.journalImg {
+    width: 100%;
+  }
+  main.contactSplit {
+    padding: 0 10%;
+  }
+  div.picture {
+    width: 100%;
+  }
+  img.contactImg {
+    width: 100%;
+    padding: 0;
+  }
+}

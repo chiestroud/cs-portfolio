@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import TechnologyCards from '../components/TechnologyCards';
 import { getTechnologies } from '../helpers/data/technologyData';
 import TechnologyForm from './TechnologyForm';
+import firebaseConfig from '../helpers/apiKeys';
 
 export default function Technologies({ user }) {
   const [techForm, setTechForm] = useState(false);
@@ -22,7 +23,7 @@ export default function Technologies({ user }) {
       <div className="head">
         <header className="title">Technologies</header>
       </div>
-      {user.uid === 'pMoZ9406o4PBfKiLZ5DZoIFpRrl1'
+      {user.uid === firebaseConfig.adminId
         && <div>
       {!techForm
         ? <Button color='info' onClick={handleTechClick}>Add Technology</Button>
@@ -31,7 +32,7 @@ export default function Technologies({ user }) {
           <TechnologyForm setTechnologies={setTechnologies} setTechForm={setTechForm}/>
           </div>}
       </div>
-}
+      }
         <section className="techContainer">
         <div className="technlogyContainer">
           {technologies.map((technology) => (
