@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import ProjectCards from '../components/ProjectCards';
 import { getProjects } from '../helpers/data/projectData';
 import ProjectForm from './ProjectForm';
+import firebaseConfig from '../helpers/apiKeys';
 
 export default function Projects({ user }) {
   const [projects, setProjects] = useState([]);
@@ -19,7 +20,7 @@ export default function Projects({ user }) {
 
   return (
     <main>
-      {user.uid === 'pMoZ9406o4PBfKiLZ5DZoIFpRrl1'
+      {user.uid === firebaseConfig.adminId
       && <div>
       {!showForm
         ? <Button color='info' onClick={handleClick}>Add Project</Button>

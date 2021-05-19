@@ -5,6 +5,7 @@ import {
 } from 'reactstrap';
 import ProjectForm from '../views/ProjectForm';
 import { deleteProject } from '../helpers/data/projectData';
+import firebaseConfig from '../helpers/apiKeys';
 
 export default function ProjectCards({
   firebaseKey,
@@ -50,7 +51,7 @@ export default function ProjectCards({
           </CardBody>
         : ''
       }
-      {user.uid === 'pMoZ9406o4PBfKiLZ5DZoIFpRrl1'
+      {user.uid === firebaseConfig.adminId
         ? <div className='btnContainer'>
         <Button color='success' onClick={() => handleClick('edit')}>
           {editing ? 'Close Form' : 'Update Project'}</Button>
