@@ -55,6 +55,7 @@ div.btnContainer {
   margin: 3rem;
   border-radius: 45%;
   color: #fff;
+  width: 120px;
 }
 
 #btn:hover {
@@ -62,6 +63,21 @@ div.btnContainer {
   box-shadow: 0px 15px 20px rgba(105, 105, 105, 0.4);
   transform: translateY(-3px);
   margin: 3rem;
+  border-radius: 45%;
+  color: #fff;
+}
+
+// Modal Btn
+#btnModal {
+  background-color: #48494B;
+  border-radius: 45%;
+  color: #fff;
+  width: 120px;
+}
+#btnModal:hover {
+  background-color: #2B2D2F;
+  box-shadow: 0px 15px 20px rgba(105, 105, 105, 0.4);
+  transform: translateY(-3px);
   border-radius: 45%;
   color: #fff;
 }
@@ -164,16 +180,12 @@ div.projectsContainer {
 }
 
 div.card {
-  flex-basis: 40%;
-  object-fit: scale-down;
-  font-size: 1.1vw;
-  background-color: #f2f2f2;
-  border: none;
-  height: 720px;
+  flex-basis: 25%;
+  background-color: #dddddd;
+  border: black solid 2px;
 }
 
 div.cardBody {
-  height: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -181,7 +193,7 @@ div.cardBody {
 
 #projectImg {
   width: 80%;
-  height: 50%;
+  height: 60%;
 }
 
 .readMore:hover {
@@ -212,6 +224,8 @@ div.technlogyContainer {
 
 .techCard.card {
   max-width: 200px;
+  border: none;
+  background-color: #f2f2f2;
 }
 
 // Contact Page
@@ -314,6 +328,15 @@ a.nav-link:hover {
     text-align: center;
     padding-top: 2%;
   }
+  #projectImg {
+    width: 80%;
+    height: auto;
+  }
+  div.card {
+    flex-basis: 50%;
+    background-color: #dddddd;
+    border: black solid 2px;
+  }
 }
 
 @media screen and (max-width: 800px) {
@@ -349,5 +372,14 @@ a.nav-link:hover {
   img.contactImg {
     width: 100%;
     padding: 0;
+  }
+  .card-body {
+    padding: 0;
+  }
+  #btn {
+    margin: 0;
+  }
+  #btn:hover {
+    margin: 0;
   }
 }

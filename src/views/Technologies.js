@@ -23,7 +23,7 @@ export default function Technologies({ user }) {
       <div className="head">
         <header className="title">Technologies</header>
       </div>
-      {user.uid === firebaseConfig.adminId
+      {(user && user.uid === firebaseConfig.adminId)
         && <div>
       {!techForm
         ? <Button color='info' onClick={handleTechClick}>Add Technology</Button>
