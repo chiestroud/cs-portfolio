@@ -25,7 +25,7 @@ export default function TechnologyCards({
   return (
       <Card key={firebaseKey} className='techCard' >
       <CardImg id="technologyImg" top width="100%" src={logo} alt={technologyName} />
-      {user.uid === firebaseConfig.adminId
+      {(user && user.uid === firebaseConfig.adminId)
         && <div>
         <Button color="primary" size="sm" onClick={() => handleClick('edit')}>
           {editing ? 'Close' : 'Edit'}

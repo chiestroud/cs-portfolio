@@ -20,7 +20,7 @@ export default function Projects({ user }) {
 
   return (
     <main>
-      {user.uid === firebaseConfig.adminId
+      {(user && user.uid === firebaseConfig.adminId)
       && <div>
       {!showForm
         ? <Button color='info' onClick={handleClick}>Add Project</Button>
