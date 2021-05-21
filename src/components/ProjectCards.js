@@ -31,18 +31,15 @@ export default function ProjectCards({
 
   return (
     <Card body
-      className='card m-5 text-center'
+      className='card m-5 text-center marginLeft'
       key={firebaseKey} id={firebaseKey}>
       {!editing
         ? <CardBody>
             <CardTitle tag='h4'>{title}</CardTitle>
             <CardImg className='mx-auto d-block' id='projectImg' src={screenshot} alt={title} />
           <ModalCard title={title} description={description} githubUrl={githubUrl} url={url} screenshot={screenshot} technologiesUsed={technologiesUsed}/>
-          </CardBody>
-        : ''
-      }
-      {(user && user.uid === firebaseConfig.adminId)
-        ? <div className='btnContainer'>
+          {(user && user.uid === firebaseConfig.adminId)
+            ? <div className='btnContainer mt-2'>
         <Button color='success' onClick={() => handleClick('edit')}>
           {editing ? 'Close Form' : 'Update Project'}</Button>
         {editing
@@ -60,7 +57,10 @@ export default function ProjectCards({
           />}
         <Button color='danger' onClick={() => handleClick('delete')}>Delete</Button>
       </div>
-        : ''}
+            : ''}
+        </CardBody>
+        : ''
+      }
     </Card>
   );
 }

@@ -210,12 +210,18 @@ div.card {
   flex-basis: 25%;
   background-color: #ebecf0;
   border: #808080 solid 5px;
+  border-radius:50%;
+  height: 500px
 }
 
 div.cardBody {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.text-center.card-body {
+  max-width: 25%;
 }
 
 .card-body {
