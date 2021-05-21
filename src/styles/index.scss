@@ -21,6 +21,10 @@ nav.navbar {
   background-color: #f2f2f2;
 }
 
+.fa-hamburger {
+  color: $favColor;
+}
+
 // Home Page
 .aboutMe {
   height: 80vh;
@@ -44,6 +48,7 @@ nav.navbar {
   color: $favColor;
   margin-top: 1%;
   font-size: 1.5rem;
+  font-weight: bold;
 }
 
 div.btnContainer {
@@ -121,16 +126,33 @@ ul.introduction-back {
   justify-content: center;
   color: $favColor;
   font-size: 1.2rem;
+  background-color: #ebecf0;
 }
 
 .profileImg {
-  width: 550px;
+  width: 100%;
 }
+
+#projectBtn {
+  background-color: #48494B;
+  border-radius: 45%;
+  color: #fff;
+  width: 200px;
+}
+#projectBtn:hover {
+  background-color: #2B2D2F;
+  box-shadow: 0px 15px 20px rgba(105, 105, 105, 0.4);
+  transform: translateY(-3px);
+  border-radius: 45%;
+  color: #fff;
+}
+
 
 #aboutBtn {
   background-color: #48494B;
   border-radius: 45%;
   color: #fff;
+  width: 120px;
 }
 
 #aboutBtn:hover {
@@ -181,8 +203,8 @@ div.projectsContainer {
 
 div.card {
   flex-basis: 25%;
-  background-color: #dddddd;
-  border: black solid 2px;
+  background-color: #ebecf0;
+  border: #808080 solid 2px;
 }
 
 div.cardBody {
@@ -314,7 +336,6 @@ a.nav-link:hover {
   }
   .aboutMe {
     margin-top: 2%;
-    font-size: 3vw;
   }
   p.introduction {
     align-self: stretch;
@@ -337,9 +358,16 @@ a.nav-link:hover {
     background-color: #dddddd;
     border: black solid 2px;
   }
+  .splitMain {
+    font-size: 0.9rem;
+    width: 90%;
+  }
+  img.journalImg {
+    width: 100%;
+  }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 400px) {
   nav.navbar.navbar-expand-md.fixed-top {
     max-width: 100vw;
   }
@@ -376,10 +404,26 @@ a.nav-link:hover {
   .card-body {
     padding: 0;
   }
+
+  div.btnContainer {
+    display: flex;
+    justify-content: space-around;
+  }
   #btn {
     margin: 0;
   }
   #btn:hover {
     margin: 0;
+  }
+  div.mainContainer {
+    margin-top: 2%;
+  }
+  div.card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #tech {
+    font-size: 1.6rem;
   }
 }
