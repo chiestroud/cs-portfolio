@@ -395,9 +395,12 @@ a.nav-link:hover {
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 450px) {
   nav.navbar.navbar-expand-md.fixed-top {
     max-width: 100vw;
+  }
+  div.btnContainer {
+    margin-top: 10%;
   }
   p.introduction {
     padding: 0;

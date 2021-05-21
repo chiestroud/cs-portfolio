@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
 import {
   Button, Modal, ModalHeader, ModalBody, ModalFooter
 } from 'reactstrap';
@@ -26,9 +25,9 @@ const ModalCard = ({
         <img src={screenshot} alt={title} />
         <ModalBody>{readMore ? description : `${description.substring(0, 100)}...`
                 }
-              <Link className="readMore" onClick={() => setReadMore(!readMore)}>
+              <a className="readMore" onClick={() => setReadMore(!readMore)}>
                 {readMore ? ' Show less' : ' Read More'}
-          </Link>
+          </a>
         </ModalBody>
         <ModalFooter>
           <p>Technlogies used: {technologiesUsed}</p>
