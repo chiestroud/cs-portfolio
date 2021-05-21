@@ -41,12 +41,12 @@ const NavBar = ({ user }) => {
             </NavItem>
           </Nav>
           <NavbarText>
-          {user && <p className='mr-3'>Welcome {user.fullName}</p>}
+          {user && <p className='mr-3 mt-2'>Welcome to my page, {user.fullName}</p>}
           </NavbarText>
           <NavbarText>
             {user
-              ? <Button color='danger' onClick={signOutUser}>Log Out</Button>
-              : <Button color='info' onClick={signInUser}>Sign In</Button>
+              ? <Button id="aboutBtn" onClick={signOutUser}>Log Out</Button>
+              : <Button id="aboutBtn" onClick={signInUser}>Sign In</Button>
             }
           </NavbarText>
         </Collapse>
