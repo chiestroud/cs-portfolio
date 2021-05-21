@@ -38,8 +38,11 @@ export default function ProjectCards({
             <CardTitle tag='h4'>{title}</CardTitle>
             <CardImg className='mx-auto d-block' id='projectImg' src={screenshot} alt={title} />
           <ModalCard title={title} description={description} githubUrl={githubUrl} url={url} screenshot={screenshot} technologiesUsed={technologiesUsed}/>
-          {(user && user.uid === firebaseConfig.adminId)
-            ? <div className='btnContainer mt-2'>
+          </CardBody>
+        : ''
+      }
+      {(user && user.uid === firebaseConfig.adminId)
+        ? <div className='btnContainer'>
         <Button color='success' onClick={() => handleClick('edit')}>
           {editing ? 'Close Form' : 'Update Project'}</Button>
         {editing
@@ -57,10 +60,7 @@ export default function ProjectCards({
           />}
         <Button color='danger' onClick={() => handleClick('delete')}>Delete</Button>
       </div>
-            : ''}
-        </CardBody>
-        : ''
-      }
+        : ''}
     </Card>
   );
 }
