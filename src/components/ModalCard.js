@@ -20,7 +20,7 @@ const ModalCard = ({
 
   return (
     <div>
-      <Button className="mt-3" id='projectBtn' onClick={toggle}>View {title}</Button>
+      <Button className="mt-4" id='projectBtn' onClick={toggle}>View {title}</Button>
       <Modal isOpen={modal} toggle={toggle} size="lg">
         <ModalHeader toggle={toggle}>{title}</ModalHeader>
         <img src={screenshot} alt={title} />
