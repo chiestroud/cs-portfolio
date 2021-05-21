@@ -25,6 +25,10 @@ nav.navbar {
   color: $favColor;
 }
 
+.userName {
+  font-weight: bold;
+}
+
 // Home Page
 .aboutMe {
   height: 80vh;
@@ -127,6 +131,7 @@ ul.introduction-back {
   color: $favColor;
   font-size: 1.2rem;
   background-color: #ebecf0;
+  border: $favColor 2px solid;
 }
 
 .profileImg {
@@ -204,7 +209,7 @@ div.projectsContainer {
 div.card {
   flex-basis: 25%;
   background-color: #ebecf0;
-  border: #808080 solid 2px;
+  border: #808080 solid 5px;
 }
 
 div.cardBody {
@@ -213,9 +218,16 @@ div.cardBody {
   justify-content: center;
 }
 
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 #projectImg {
   width: 80%;
   height: 60%;
+  border: steelblue 4px solid;
 }
 
 .readMore:hover {
@@ -229,6 +241,7 @@ div.techCard {
   align-items: center;
   width: 100%;
   height: 100%;
+  margin-top: 2%;
 }
 
 img#technologyImg {
