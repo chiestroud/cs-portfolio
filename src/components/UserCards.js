@@ -10,7 +10,7 @@ export default function TechnologyCards({
   email
 }) {
   return (
-      <Card key={firebaseKey} className='techCard' >
+      <Card key={firebaseKey} id="userCard" >
       <CardText className='userName'>{fullName}</CardText>
       <CardText className='userName'>{email}</CardText>
       </Card>

@@ -22,7 +22,7 @@ const ModalCard = ({
       <Button className="mt-4" id='projectBtn' onClick={toggle}>View {title}</Button>
       <Modal isOpen={modal} toggle={toggle} size="lg">
         <ModalHeader toggle={toggle}>{title}</ModalHeader>
-        <img src={screenshot} alt={title} />
+        <img className='modalImg' src={screenshot} alt={title} />
         <ModalBody>{readMore ? description : `${description.substring(0, 100)}...`
                 }
               <a className="readMore" onClick={() => setReadMore(!readMore)}>
