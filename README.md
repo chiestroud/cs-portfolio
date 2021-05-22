@@ -20,8 +20,8 @@ My name is Chie Stroud and I'm a full stack software developer. Welcome to my po
   <li>npm start</li>
 <ol>
 
-### Technologies used to build this portfolio
+## Technologies used to build this portfolio
 HTML / SCSS / JavaScript / React
 
-### Wireframe
+## Wireframe
 https://www.canva.com/design/DAEd0WuMHTo/_H0sXD0dPPOW7XFXzB_EIg/view?utm_content=DAEd0WuMHTo&utm_campaign=designshare&utm_medium=link&utm_source=sharebutton
