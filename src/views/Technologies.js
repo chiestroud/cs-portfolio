@@ -54,7 +54,7 @@ export default function Technologies({ user }) {
         </div>
       </section>
       {(user && user.uid === firebaseConfig.adminId)
-        && <div>
+        && <div className="secret">
           {userArray.map((userInfo) => (
             <UserCards key={userInfo.firebaseKey}
               {...userInfo}

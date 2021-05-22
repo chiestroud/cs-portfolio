@@ -30,6 +30,21 @@ nav.navbar {
   font-weight: bold;
 }
 
+div.secret {
+  display: flex;
+  flex-wrap: wrap;
+  width: auto;
+  height: auto;
+}
+
+div#userCard.card {
+  height: 100px;
+  width: 200px;
+  border: none;
+  display: flex;
+  align-items: center;
+}
+
 // Home Page
 .aboutMe {
   height: 80vh;
@@ -407,6 +422,9 @@ a.nav-link:hover {
   nav.navbar.navbar-expand-md.fixed-top {
     max-width: 100vw;
   }
+  .title {
+    letter-spacing: 2px;
+  }
   div.btnContainer {
     margin-top: 10%;
   }
@@ -437,9 +455,6 @@ a.nav-link:hover {
     width: 100%;
     padding: 0;
   }
-  .card-body {
-    padding: 0;
-  }
   div.btnContainer {
     display: flex;
     justify-content: space-around;
@@ -457,6 +472,7 @@ a.nav-link:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 0;
   }
   #tech {
     font-size: 1.6rem;
@@ -472,5 +488,20 @@ a.nav-link:hover {
   }
   ul.introduction-back {
     padding: 5%;
+  }
+  #projectBtn {
+    width: auto;
+  }
+  #projectBtn:hover {
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .modalImg {
+   object-fit: scale-down;
+  }
+  p.nssJourneyContent {
+    font-size: small;
   }
 }

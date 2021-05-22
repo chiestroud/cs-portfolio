@@ -46,7 +46,7 @@ const NavBar = ({ user }) => {
           <NavbarText>
             {user
               ? <Button id="aboutBtn" onClick={signOutUser}>Log Out</Button>
-              : <Button id="aboutBtn" onClick={signInUser}>Sign In</Button>
+              : <Button id="aboutBtn" onClick={signInUser}>Share Your Info</Button>
             }
           </NavbarText>
         </Collapse>
