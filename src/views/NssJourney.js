@@ -7,13 +7,13 @@ export default function NssJourney() {
   return (
     <section>
       <div className="head">
-        <header className="title">My Learning Journey in NSS</header>
+        <header className="title" id="tech">My Learning Journey in NSS</header>
         <p className="nssJourneyContent">I was obsessed with learning web development and decided to join Web Developer Bootcamp in Nashville Software School in January 2021. I wanted to see my progress over the course of study so at the beginning of every month, I spent a couple of hours building a journal page and logged my daily school activity. Click the image to go to the deoloyed site.</p>
       </div>
       <VerticalTimeline className='vertical-timeline vertical-timeline-custom-line'>
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
-          contentStyle={{ background: '#dcdcdc', color: 'black' }}
+          contentStyle={{ background: '#dcdcdc', color: '#5b5b5b' }}
           contentArrowStyle={{ borderRight: '7px solid  #dcdcdc' }}
           date="Jan 2021 ~ Jan 2022"
           dateClassName="dateClass"
@@ -30,7 +30,7 @@ export default function NssJourney() {
       </VerticalTimelineElement>
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
-          contentStyle={{ background: '#dcdcdc', color: 'black' }}
+          contentStyle={{ background: '#dcdcdc', color: '#5b5b5b' }}
           contentArrowStyle={{ borderRight: '7px solid  #dcdcdc' }}
           date="Jan 2021"
           iconStyle={{
@@ -46,7 +46,7 @@ export default function NssJourney() {
       </VerticalTimelineElement>
       <VerticalTimelineElement
         className="vertical-timeline-element--work"
-        contentStyle={{ background: '#dcdcdc', color: 'black' }}
+        contentStyle={{ background: '#dcdcdc', color: '#5b5b5b' }}
         contentArrowStyle={{ borderRight: '7px solid  #dcdcdc' }}
         date="Feb 2021"
         iconStyle={{
@@ -62,7 +62,7 @@ export default function NssJourney() {
       </VerticalTimelineElement>
       <VerticalTimelineElement
         className="vertical-timeline-element--work"
-        contentStyle={{ background: '#dcdcdc', color: 'black' }}
+        contentStyle={{ background: '#dcdcdc', color: '#5b5b5b' }}
         contentArrowStyle={{ borderRight: '7px solid  #dcdcdc' }}
         date="Mar 2021"
         iconStyle={{
@@ -78,7 +78,7 @@ export default function NssJourney() {
       </VerticalTimelineElement>
       <VerticalTimelineElement
         className="vertical-timeline-element--work"
-        contentStyle={{ background: '#dcdcdc', color: 'black' }}
+        contentStyle={{ background: '#dcdcdc', color: '#5b5b5b' }}
         contentArrowStyle={{ borderRight: '7px solid  #dcdcdc' }}
         date="Apr 2021"
         iconStyle={{
@@ -94,7 +94,7 @@ export default function NssJourney() {
       </VerticalTimelineElement>
       <VerticalTimelineElement
         className="vertical-timeline-element--work"
-        contentStyle={{ background: '#dcdcdc', color: 'black' }}
+        contentStyle={{ background: '#dcdcdc', color: '#5b5b5b' }}
         contentArrowStyle={{ borderRight: '7px solid  #dcdcdc' }}
         date="May 2021"
         iconStyle={{
@@ -109,7 +109,7 @@ export default function NssJourney() {
         </div>
       </VerticalTimelineElement>
       <VerticalTimelineElement
-        contentStyle={{ background: '#dcdcdc', color: 'black' }}
+        contentStyle={{ background: '#dcdcdc', color: '5b5b5b' }}
         contentArrowStyle={{ borderRight: '7px solid  #dcdcdc' }}
         iconStyle={{
           background: '#aca18c', color: '#fff', display: 'flex', justifyContent: 'center', alignItems: 'center'

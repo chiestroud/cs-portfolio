@@ -20,10 +20,7 @@ export default function Technologies({ user }) {
 
   return (
     <main>
-      <div className="head">
-        <header className="title">Technologies</header>
-      </div>
-      {user.uid === firebaseConfig.adminId
+      {(user && user.uid === firebaseConfig.adminId)
         && <div>
       {!techForm
         ? <Button color='info' onClick={handleTechClick}>Add Technology</Button>
@@ -33,8 +30,11 @@ export default function Technologies({ user }) {
           </div>}
       </div>
       }
+      <div className="head">
+        <header id="tech" className="title">Technologies</header>
+      </div>
         <section className="techContainer">
-        <div className="technlogyContainer">
+        <div className="technlogyContainer mt-2">
           {technologies.map((technology) => (
             <TechnologyCards
               key={technology.firebaseKey}

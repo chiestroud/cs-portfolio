@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import {
-  Card, CardImg, CardBody, CardTitle, CardText, Button, CardLink,
+  Card, CardImg, CardBody, CardTitle, Button
 } from 'reactstrap';
 import ProjectForm from '../views/ProjectForm';
 import { deleteProject } from '../helpers/data/projectData';
 import firebaseConfig from '../helpers/apiKeys';
+import ModalCard from './ModalCard';
 
 export default function ProjectCards({
   firebaseKey,
@@ -19,7 +20,6 @@ export default function ProjectCards({
   available,
   user
 }) {
-  const [readMore, setReadMore] = useState(false);
   const [editing, setEditing] = useState(false);
   const handleClick = (type) => {
     if (type === 'edit') {
@@ -31,27 +31,17 @@ export default function ProjectCards({
 
   return (
     <Card body
-      className='card m-5 text-center'
+      className='card m-5 text-center marginLeft'
       key={firebaseKey} id={firebaseKey}>
       {!editing
         ? <CardBody>
             <CardTitle tag='h4'>{title}</CardTitle>
             <CardImg className='mx-auto d-block' id='projectImg' src={screenshot} alt={title} />
-            <div className="cardBody">
-              <CardText>{readMore ? description : `${description.substring(0, 100)}...`
-                }
-              <CardLink className="readMore" onClick={() => setReadMore(!readMore)}>
-                {readMore ? ' Show less' : ' Read More'}
-              </CardLink>
-              </CardText>
-              <CardText>{technologiesUsed}</CardText>
-                <a href={githubUrl} target='_blank' rel="noreferrer" className='m-1'>GitHub</a>
-                <a href={url} target='_blank' rel="noreferrer">Deployed Site</a>
-            </div>
+          <ModalCard title={title} description={description} githubUrl={githubUrl} url={url} screenshot={screenshot} technologiesUsed={technologiesUsed}/>
           </CardBody>
         : ''
       }
-      {user.uid === firebaseConfig.adminId
+      {(user && user.uid === firebaseConfig.adminId)
         ? <div className='btnContainer'>
         <Button color='success' onClick={() => handleClick('edit')}>
           {editing ? 'Close Form' : 'Update Project'}</Button>
