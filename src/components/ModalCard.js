@@ -23,7 +23,7 @@ const ModalCard = ({
       <Modal isOpen={modal} toggle={toggle} size="lg">
         <ModalHeader toggle={toggle}>{title}</ModalHeader>
         <CardImg className='modalImg' src={screenshot} alt={title} />
-        <ModalBody>{readMore ? description : `${description.substring(0, 100)}...`
+        <ModalBody>{readMore ? description : `${description.substring(0, 150)}...`
                 }
               <a className="readMore" onClick={() => setReadMore(!readMore)}>
                 {readMore ? ' Show less' : ' Read More'}
