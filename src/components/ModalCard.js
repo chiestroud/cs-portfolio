@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import {
-  Button, Modal, ModalHeader, ModalBody, ModalFooter
+  Button, Modal, ModalHeader, ModalBody, ModalFooter, CardImg
 } from 'reactstrap';
 
 const ModalCard = ({
@@ -22,7 +22,7 @@ const ModalCard = ({
       <Button className="mt-4" id='projectBtn' onClick={toggle}>View {title}</Button>
       <Modal isOpen={modal} toggle={toggle} size="lg">
         <ModalHeader toggle={toggle}>{title}</ModalHeader>
-        <img className='modalImg' src={screenshot} alt={title} />
+        <CardImg className='modalImg' src={screenshot} alt={title} />
         <ModalBody>{readMore ? description : `${description.substring(0, 100)}...`
                 }
               <a className="readMore" onClick={() => setReadMore(!readMore)}>
