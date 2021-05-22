@@ -13,15 +13,16 @@ My name is Chie Stroud and I'm a full stack software developer. Welcome to my po
   <img src="./src/assets/tech.png" alt="mobile2" width="200" height="400">
 </p>
 
+## Technologies used to build this portfolio
+HTML / SCSS / JavaScript / React
+
+## Wireframe
+https://www.canva.com/design/DAEd0WuMHTo/_H0sXD0dPPOW7XFXzB_EIg/view?utm_content=DAEd0WuMHTo&utm_campaign=designshare&utm_medium=link&utm_source=sharebutton
+
+
 ## How to run
 <ol>
   <li>Clone down this repo</li>
   <li>npm install</li>
   <li>npm start</li>
 <ol>
-
-## Technologies used to build this portfolio
-HTML / SCSS / JavaScript / React
-
-## Wireframe
-https://www.canva.com/design/DAEd0WuMHTo/_H0sXD0dPPOW7XFXzB_EIg/view?utm_content=DAEd0WuMHTo&utm_campaign=designshare&utm_medium=link&utm_source=sharebutton
