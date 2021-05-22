@@ -8,7 +8,7 @@ export default function NssJourney() {
     <section>
       <div className="head">
         <header className="title" id="tech">My Learning Journey in NSS</header>
-        <p className="nssJourneyContent">I was obsessed with learning web development and decided to join Web Developer Bootcamp in Nashville Software School in January 2021. I wanted to see my progress over the course of study so at the beginning of every month, I spent a couple of hours building a journal page and logged my daily school activity. Click the image to go to the deoloyed site.</p>
+        <p className="nssJourneyContent">I was obsessed with learning web development and decided to join Web Developer Bootcamp in Nashville Software School in January 2021. I wanted to see my progress over the course of study in some way. I spent a couple of hours at the beginning of every month to build a journal site to log my daily school activity. Click the image to go to the deoloyed site.</p>
       </div>
       <VerticalTimeline className='vertical-timeline vertical-timeline-custom-line'>
         <VerticalTimelineElement
@@ -39,7 +39,7 @@ export default function NssJourney() {
           icon={<i id="school" className="fas fa-school"></i>}
         >
           <div className="vertical-container">
-            <h3 className="vertical-timeline-element-title">Jan 2021</h3>
+            <h3 className="vertical-timeline-element-title">January 2021</h3>
             <a href="https://cs-nss-journal.netlify.app/january.html" target="_blank" rel="noreferrer" ><img className="journalImg" src="https://lh3.googleusercontent.com/YTrz51MIfDjrlnlisw8VFuUwuH9rwQa_XQlBigEC5xOj5swndjqxHwG9oI-bIomNLNIbrsWJ8QCMYcOTb7c4bHaigH0yspCldV7l4WPp8D0hUhU2ZLq0pelpMumtK2CVNzVD_HocWyE=w2400" /></a>
             <p>January journal page is all statically typed in html. Event listener was added to change background color with button click, hover and keypress.</p>
           </div>
@@ -55,9 +55,9 @@ export default function NssJourney() {
         icon={<i id="school" className="fas fa-school"></i>}
       >
       <div className="vertical-container">
-        <h3 className="vertical-timeline-element-title">Feb 2021</h3>
+        <h3 className="vertical-timeline-element-title">February 2021</h3>
         <a href="https://cs-nss-journal.netlify.app/february.html" target="_blank" rel="noreferrer"><img className="journalImg" src="https://lh3.googleusercontent.com/jhp3LUJ77quzgaf03ko5EMewB4vDUE7gnLz3jZV-u2ZtHO8b1l8KvoG2T9lfy25zSUXfg9k-j8YrkUV0S9O528nATIO6mWGIFKJ2uGV_M4g4XUyqTPWMjQJcPmNwcDSlwaYw4QZI1TE=w2400"/></a>
-        <p>DELETE function was implemented for February Jounral. No database is connected so it will come back again when the page is refreshed. All of the journal is still statically typed in html</p>
+        <p>DELETE function was implemented for February Jounral. No database is connected so the deleted journal reappears when the page is refreshed. All of the journal is still statically typed in html</p>
       </div>
       </VerticalTimelineElement>
       <VerticalTimelineElement
@@ -71,9 +71,9 @@ export default function NssJourney() {
         icon={<i id="school" className="fas fa-school"></i>}
       >
         <div className="vertical-container">
-          <h3 className="vertical-timeline-element-title">Mar 2021</h3>
+          <h3 className="vertical-timeline-element-title">March 2021</h3>
           <a href="https://cs-journal-nss.netlify.app/#" target="_blank" rel="noreferrer"><img className="journalImg" src="https://lh3.googleusercontent.com/YTrz51MIfDjrlnlisw8VFuUwuH9rwQa_XQlBigEC5xOj5swndjqxHwG9oI-bIomNLNIbrsWJ8QCMYcOTb7c4bHaigH0yspCldV7l4WPp8D0hUhU2ZLq0pelpMumtK2CVNzVD_HocWyE=w2400"/></a>
-          <p>In March, my journal is all typed into json file and it was uploaded to firebase. All the journal data displayed on the page is called from firebase database using get request</p>
+          <p>In March, I typed all my journal in json file and uploaded the file to firebase. All the journal data displayed on the page is fetched from firebase database</p>
         </div>
       </VerticalTimelineElement>
       <VerticalTimelineElement
@@ -87,9 +87,9 @@ export default function NssJourney() {
         icon={<i id="school" className="fas fa-school"></i>}
       >
         <div className="vertical-container">
-          <h3 className="vertical-timeline-element-title">Apr 2021</h3>
+          <h3 className="vertical-timeline-element-title">April 2021</h3>
           <a href="https://cs-journal-nss.netlify.app/#" target="_blank" rel="noreferrer"><img className="journalImg" src="https://lh3.googleusercontent.com/hLtNBZX2PL4S5-Lyn4uNXK0B_sWWCXs_AclJ-NghORJOa8yT9lcC59Bkm9QMMegH-gqwVEZQtuWeHhglB9G0-IL-4VxlvH_SSrIPriDDisoKdIVkj-GHEMYJqjAoCK3sTpXgqDmUeOg=w2400"/></a>
-          <p>In April, firebase authentication was added for user to signin. Also CREATE function was added so that I can add journal on the website and displays on the DOM. Edit function was added too so that I can modify my journal on the page.</p>
+          <p>In April, firebase authentication was added for user to signin. Also CREATE function was added to add journal on the website and immediately displays on the page. Edit function was also added to modify my journal.</p>
         </div>
       </VerticalTimelineElement>
       <VerticalTimelineElement

@@ -5,13 +5,20 @@ import TechnologyCards from '../components/TechnologyCards';
 import { getTechnologies } from '../helpers/data/technologyData';
 import TechnologyForm from './TechnologyForm';
 import firebaseConfig from '../helpers/apiKeys';
+import { getUsers } from '../helpers/data/userData';
+import UserCards from '../components/UserCards';
 
 export default function Technologies({ user }) {
   const [techForm, setTechForm] = useState(false);
   const [technologies, setTechnologies] = useState([]);
+  const [userArray, setUserArray] = useState([]);
 
   useEffect(() => {
     getTechnologies().then((technologiesArray) => setTechnologies(technologiesArray));
+  }, []);
+
+  useEffect(() => {
+    getUsers().then((users) => setUserArray(users));
   }, []);
 
   const handleTechClick = () => {
@@ -34,7 +41,7 @@ export default function Technologies({ user }) {
         <header id="tech" className="title">Technologies</header>
       </div>
         <section className="techContainer">
-        <div className="technlogyContainer mt-2">
+        <div className="technlogyContainer mt-3 mb-5">
           {technologies.map((technology) => (
             <TechnologyCards
               key={technology.firebaseKey}
@@ -46,6 +53,15 @@ export default function Technologies({ user }) {
           ))}
         </div>
       </section>
+      {(user && user.uid === firebaseConfig.adminId)
+        && <div>
+          {userArray.map((userInfo) => (
+            <UserCards key={userInfo.firebaseKey}
+              {...userInfo}
+            />
+          ))}
+        </div>
+      }
     </main>
   );
 }

@@ -270,6 +270,10 @@ div.technlogyContainer {
   background-color: #f2f2f2;
 }
 
+.technology-name {
+  color: $favColor;
+}
+
 // Contact Page
 main.contactSplit {
   display: flex;
@@ -392,6 +396,10 @@ a.nav-link:hover {
   }
   .text-center.card-body {
     max-width: 100%;
+  }
+  div.technlogyContainer {
+    margin-top: 2%;
+    padding-bottom: 2%;
   }
 }
 

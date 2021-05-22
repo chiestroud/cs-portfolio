@@ -17,7 +17,9 @@ export default function about() {
       <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
         <div className="mainContainer">
           <div className="splitMain">
-            <p className="introduction">I was born and raised in Kyoto, Japan. Moved to the US in 2016, and currently working at Toyo Automotive Parts as a part of the quality team. I am also a part time Web Development Bootcamp student at Nashville Software School. It started with my out - of - nowhere thoughts of building a web application. This is the most interesting thing I have ever learned in my life and I just cannot get enough of it. Software development is an endless journey of learning, problem solving, and being creative. I love it so much.</p>
+            <p className="introduction">I was born and raised in Kyoto, Japan. Moved to the US in 2016, and currently working for an automotive manufacturer as a part of the quality team. I am also a part time Web Development Bootcamp student at Nashville Software School.</p>
+            <p className="introduction">It started with my out - of - nowhere thoughts of building a web application. I was at work thinking of random things to make my work/life easier and wondered why so many things are still manually operated. I started to wonder if software development is something extremely difficult or super expensive to implement. I started digging into online resources then I got hooked right away. This is definitely the most interesting thing I have ever learned in my life and I just cannot get enough of it.</p>
+            <p className="introduction">Software development is an endless journey of learning, problem solving, and being creative. I love it so much.</p>
             <Button id="aboutBtn" onClick={handleClick}>More Info?</Button>
           </div>
         <div className="splitMain">
@@ -32,10 +34,10 @@ export default function about() {
           <div className="splitMain">
             <p className="introduction">Some of the things I like to do during my free time.</p>
             <ul className="introduction-back">
-              <li><i className="fas fa-car-side"></i> Computer games, board games, sudoku, and jigsaw puzzles</li>
-              <li><i className="fas fa-car-side"></i> Watch movies</li>
-              <li><i className="fas fa-car-side"></i> Find new restaurants</li>
-              <li><i className="fas fa-car-side"></i> Drive my beautiful car (see picture)</li>
+              <li><i className="fas fa-car-side mr-1"></i> Computer games, sudoku, and jigsaw puzzles</li>
+              <li><i className="fas fa-car-side mr-1"></i> Watch movies (thriller, action, and horror)</li>
+              <li><i className="fas fa-car-side mr-1"></i> Find new restaurants</li>
+              <li><i className="fas fa-car-side mr-1"></i> Drive my beautiful car (see picture)</li>
             </ul>
             <Button id="aboutBtn" onClick={handleClick}>Go Back</Button>
             </div>
