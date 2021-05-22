@@ -5,6 +5,7 @@ import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import Footer from '../components/Footer';
 import NavBar from '../components/NavBar';
+import { addUser, getSingleUser } from '../helpers/data/userData';
 import Routes from '../helpers/Routes';
 import './App.scss';
 
@@ -20,9 +21,15 @@ function App({
           fullName: authed.displayName,
           profileImage: authed.photoURL,
           uid: authed.uid,
-          username: authed.email.split('@')[0]
+          username: authed.email.split('@')[0],
+          email: authed.email
         };
         setUser(userInfoObj);
+        getSingleUser(userInfoObj).then((response) => {
+          if (Object.values(response.data).length === 0) {
+            addUser(userInfoObj);
+          }
+        });
       } else if (user || user === null) {
         setUser(false);
       }

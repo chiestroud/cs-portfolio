@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { Card, CardImg, Button } from 'reactstrap';
+import {
+  Card, CardImg, Button, CardText
+} from 'reactstrap';
 import TechnologyForm from '../views/TechnologyForm';
 import { deleteTechnology } from '../helpers/data/technologyData';
 import firebaseConfig from '../helpers/apiKeys';
@@ -25,6 +27,7 @@ export default function TechnologyCards({
   return (
       <Card key={firebaseKey} className='techCard' >
       <CardImg id="technologyImg" top width="100%" src={logo} alt={technologyName} />
+      <CardText className='technology-name'>{technologyName}</CardText>
       {(user && user.uid === firebaseConfig.adminId)
         && <div>
         <Button color="primary" size="sm" onClick={() => handleClick('edit')}>
