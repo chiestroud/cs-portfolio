@@ -17,9 +17,10 @@ export default function about() {
       <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
         <div className="mainContainer">
           <div className="splitMain">
-            <p className="introduction">I was born and raised in Kyoto, Japan. Moved to the US in 2016, and currently working for an automotive manufacturer as a part of the quality team. I am also a part time Web Development Bootcamp student at Nashville Software School.</p>
-            <p className="introduction">It started with my out - of - nowhere thoughts of building a web application. I was at work thinking of random things to make my work/life easier and wondered why so many things are still manually operated. I started to wonder if software development is something extremely difficult or super expensive to implement. I started digging into online resources then I got hooked right away. This is definitely the most interesting thing I have ever learned in my life and I just cannot get enough of it.</p>
-            <p className="introduction">Software development is an endless journey of learning, problem solving, and being creative. I love it so much.</p>
+            <p className="introduction">Hello, my name is Chie Stroud.</p>
+            <p className="introduction">I was born and raised in Kyoto, Japan. I lived in Japan most of my life until I moved to the US in 2016, and I am currently working for an automotive manufacturer as a part of the quality team. I am also a part time Web Development Bootcamp student at the Nashville Software School.</p>
+            <p className="introduction">My desire to study programming started with my out of the blue thoughts of building a web application. While at work, I began thinking of random things to make my work and life easier. I wondered why so many things are still manually operated. I started to wonder if software development is a tool I could use or if it was something that was prohibitively difficult or expensive to implement. I started digging into online resources and I ended up getting hooked right away. This is definitely the most interesting subject I have ever learned and I just cannot get enough of it.</p>
+            <p className="introduction">Software development is an endless journey of learning, problem solving, and being creative. This is why I love it so much.</p>
             <Button id="aboutBtn" onClick={handleClick}>More Info?</Button>
           </div>
         <div className="splitMain">
@@ -32,12 +33,12 @@ export default function about() {
               <img className="profileImg" src='https://lh3.googleusercontent.com/h-mNpLfYwu79wISKWq-zNIK-zDVGBIdXiWYbr6U5HbJf3XU88YDEB1pRJ7mJ8ziOBsaUwDJPooiaLLWl7P865VDvLriDTQc8qlfI5Ti6XfXBoDL2WdB7h5clDDyp5oVIyLU6xc8xUeM=w2400' alt='subaru brz'/>
            </div>
           <div className="splitMain">
-            <p className="introduction">Some of the things I like to do during my free time.</p>
+            <p className="introduction">Here are some of the things I like to do during my free time.</p>
             <ul className="introduction-back">
-              <li><i className="fas fa-car-side mr-1"></i> Computer games, sudoku, and jigsaw puzzles</li>
-              <li><i className="fas fa-car-side mr-1"></i> Watch movies (thriller, action, and horror)</li>
-              <li><i className="fas fa-car-side mr-1"></i> Find new restaurants</li>
-              <li><i className="fas fa-car-side mr-1"></i> Drive my beautiful car (see picture)</li>
+              <li><i className="fas fa-car-side mr-1"></i>Easy going interactive activities: computer games, sudoku,  jigsaw puzzles, etc.</li>
+              <li><i className="fas fa-car-side mr-1"></i>Watching movies (thriller, action, and horror)</li>
+              <li><i className="fas fa-car-side mr-1"></i>Finding new restaurants</li>
+              <li><i className="fas fa-car-side mr-1"></i>Driving the most beautiful car in the world. This may be a biased opinion... (see picture)</li>
             </ul>
             <Button id="aboutBtn" onClick={handleClick}>Go Back</Button>
             </div>

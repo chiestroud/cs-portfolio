@@ -130,7 +130,8 @@ div.react-card-back {
 .introduction {
   display: flex;
   align-items: center;
-  padding: 4%;
+  margin: 0;
+  padding: 15px;
 }
 
 ul.introduction-back {
@@ -174,6 +175,7 @@ ul.introduction-back {
   border-radius: 45%;
   color: #fff;
   width: 120px;
+  margin-top: 3%;
 }
 
 #aboutBtn:hover {
