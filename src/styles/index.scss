@@ -498,9 +498,10 @@ a.nav-link:hover {
 }
 
 @media screen and (max-width: 350px) {
-  .modalImg {
+  img.modalImg.card-img{
    object-fit: scale-down;
   }
+
   p.nssJourneyContent {
     font-size: small;
   }
