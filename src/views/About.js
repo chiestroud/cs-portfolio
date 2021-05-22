@@ -21,13 +21,13 @@ export default function about() {
             <Button id="aboutBtn" onClick={handleClick}>More Info?</Button>
           </div>
         <div className="splitMain">
-          <img className="profileImg" src='https://lh3.googleusercontent.com/18WjMdW7N2oA91C3jHVTBCiTHbwsittantI-gsHPDLqt5WghcIEEDEuJf8zk8jkWUEsSx343HcjW0FZl8WJBtTn3n1T_zp48OtkLm4wP8UM5KsetX0FYA_NbOYCz_8a3SjHKZJLnYTU=w2400' />
+          <img className="profileImg" src='https://lh3.googleusercontent.com/18WjMdW7N2oA91C3jHVTBCiTHbwsittantI-gsHPDLqt5WghcIEEDEuJf8zk8jkWUEsSx343HcjW0FZl8WJBtTn3n1T_zp48OtkLm4wP8UM5KsetX0FYA_NbOYCz_8a3SjHKZJLnYTU=w2400' alt='profile picture' />
         </div>
       </div>
       { showPic
           && <div className='mainContainer'>
             <div className="splitMain">
-              <img className="profileImg" src='https://lh3.googleusercontent.com/h-mNpLfYwu79wISKWq-zNIK-zDVGBIdXiWYbr6U5HbJf3XU88YDEB1pRJ7mJ8ziOBsaUwDJPooiaLLWl7P865VDvLriDTQc8qlfI5Ti6XfXBoDL2WdB7h5clDDyp5oVIyLU6xc8xUeM=w2400' />
+              <img className="profileImg" src='https://lh3.googleusercontent.com/h-mNpLfYwu79wISKWq-zNIK-zDVGBIdXiWYbr6U5HbJf3XU88YDEB1pRJ7mJ8ziOBsaUwDJPooiaLLWl7P865VDvLriDTQc8qlfI5Ti6XfXBoDL2WdB7h5clDDyp5oVIyLU6xc8xUeM=w2400' alt='subaru brz'/>
            </div>
           <div className="splitMain">
             <p className="introduction">Some of the things I like to do during my free time.</p>

@@ -41,7 +41,7 @@ const NavBar = ({ user }) => {
             </NavItem>
           </Nav>
           <NavbarText>
-          {user && <p className='mr-3 mt-2'>Welcome to my page, <span className="userName">{user.fullName}</span></p>}
+          {user && <p className='mr-3 mt-2'>Welcome, <span className="userName">{user.fullName}</span></p>}
           </NavbarText>
           <NavbarText>
             {user

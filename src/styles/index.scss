@@ -402,9 +402,6 @@ a.nav-link:hover {
   div.btnContainer {
     margin-top: 10%;
   }
-  p.introduction {
-    padding: 0;
-  }
   div.react-card-back {
     padding: 0;
     margin: 0;
@@ -435,7 +432,6 @@ a.nav-link:hover {
   .card-body {
     padding: 0;
   }
-
   div.btnContainer {
     display: flex;
     justify-content: space-around;
@@ -447,7 +443,7 @@ a.nav-link:hover {
     margin: 0;
   }
   div.mainContainer {
-    margin-top: 2%;
+    margin-top: 5%;
   }
   div.card-body {
     display: flex;
@@ -462,5 +458,11 @@ a.nav-link:hover {
   }
   div.techCard.card {
     height: auto;
+  }
+  p.introduction {
+    padding: 5%;
+  }
+  ul.introduction-back {
+    padding: 5%;
   }
 }
