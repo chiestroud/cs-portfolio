@@ -378,16 +378,28 @@ a.nav-link:hover {
   .text-center.card-body {
     max-width: 50%;
   }
-}
-@media screen and (max-width: 800px) {
-  .mainContainer {
+  div.mainContainer {
     width: 100%;
     display: grid;
     grid-template-columns: 100%;
     justify-items: center;
   }
+  div.splitMain {
+    width: 100%;
+  }
+  section.contactContainer {
+    width: 100%;
+  }
+  main.contactSplit {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 800px) {
   .aboutMe {
-    margin-top: 2%;
+    margin-top: 3%;
+  }
+  div.react-card-flip {
+    padding: 5%;
   }
   p.introduction {
     align-self: stretch;
@@ -502,9 +514,6 @@ a.nav-link:hover {
   }
   #projectBtn:hover {
     width: auto;
-  }
-  section.contactContainer {
-    width: 100%;
   }
 }
 
