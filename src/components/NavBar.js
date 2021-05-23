@@ -21,7 +21,7 @@ const NavBar = ({ user }) => {
     <div id="navContainer">
       <Navbar expand="md" fixed="top">
         <Link className='navbar-brand' to="/">Chie Stroud</Link>
-        <NavbarToggler onClick={toggle}><i className="fas fa-hamburger"></i></NavbarToggler>
+        <NavbarToggler onClick={toggle}>{isOpen ? <i id="close" className="far fa-window-close"></i> : <i className="fas fa-hamburger"></i>}</NavbarToggler>
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             <NavItem>
