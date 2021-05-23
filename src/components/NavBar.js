@@ -17,7 +17,7 @@ const NavBar = ({ user }) => {
 
   return (
     <div id="navContainer">
-      <Navbar expand="md" fixed="top" expanded={isOpen}>
+      <Navbar expand="md" fixed="top" isOpen={isOpen}>
         <Link className='navbar-brand' to="/">Chie Stroud</Link>
         <NavbarToggler onClick={() => setIsOpen(isOpen ? false : 'isOpen')}>{isOpen ? <i id="close" className="far fa-window-close"></i> : <i className="fas fa-hamburger"></i>}</NavbarToggler>
         <Collapse isOpen={isOpen} navbar>
