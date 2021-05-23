@@ -25,28 +25,28 @@ const NavBar = ({ user }) => {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             <NavItem>
-              <Link className='nav-link' onClick={toggle} to="/about">About</Link>
+              <Link className='nav-link' to="/about">About</Link>
             </NavItem>
             <NavItem>
-              <Link className='nav-link' onClick={toggle} to="/nss">NSS Journey</Link>
+              <Link className='nav-link' to="/nss">NSS Journey</Link>
             </NavItem>
             <NavItem>
-              <Link className='nav-link' onClick={toggle} to="/projects">Projects</Link>
+              <Link className='nav-link' to="/projects">Projects</Link>
             </NavItem>
             <NavItem>
-              <Link className='nav-link' onClick={toggle} to="/technologies">Technologies</Link>
+              <Link className='nav-link' to="/technologies">Technologies</Link>
             </NavItem>
             <NavItem>
-              <Link className='nav-link' onClick={toggle} to="/contact">Contact</Link>
+              <Link className='nav-link' to="/contact">Contact</Link>
             </NavItem>
           </Nav>
-          <NavbarText onClick={toggle}>
+          <NavbarText>
           {user && <p className='mr-3 mt-2'>Welcome, <span className="userName">{user.fullName}</span></p>}
           </NavbarText>
-          <NavbarText onClick={toggle}>
+          <NavbarText>
             {user
               ? <Button id="aboutBtn" onClick={signOutUser}>Log Out</Button>
-              : <Button id="aboutBtn" onClick={signInUser}>Share Your Info</Button>
+              : <Button id="aboutBtn" onClick={signInUser}>Sign Inzz</Button>
             }
           </NavbarText>
         </Collapse>
