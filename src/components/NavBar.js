@@ -15,29 +15,27 @@ import { signInUser, signOutUser } from '../helpers/auth';
 const NavBar = ({ user }) => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggle = () => setIsOpen(!isOpen);
-
   return (
     <div id="navContainer">
-      <Navbar expand="md" fixed="top">
+      <Navbar expand="md" fixed="top" expanded={isOpen}>
         <Link className='navbar-brand' to="/">Chie Stroud</Link>
-        <NavbarToggler onClick={toggle}>{isOpen ? <i id="close" className="far fa-window-close"></i> : <i className="fas fa-hamburger"></i>}</NavbarToggler>
+        <NavbarToggler onClick={() => setIsOpen(isOpen ? false : 'isOpen')}>{isOpen ? <i id="close" className="far fa-window-close"></i> : <i className="fas fa-hamburger"></i>}</NavbarToggler>
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             <NavItem>
-              <Link className='nav-link' to="/about">About</Link>
+              <Link className='nav-link' to="/about" onClick={() => setTimeout(() => { setIsOpen(false); }, 150)} >About</Link>
             </NavItem>
             <NavItem>
-              <Link className='nav-link' to="/nss">NSS Journey</Link>
+              <Link className='nav-link' to="/nss" onClick={() => setTimeout(() => { setIsOpen(false); }, 150)} >NSS Journey</Link>
             </NavItem>
             <NavItem>
-              <Link className='nav-link' to="/projects">Projects</Link>
+              <Link className='nav-link' to="/projects" onClick={() => setTimeout(() => { setIsOpen(false); }, 150)} >Projects</Link>
             </NavItem>
             <NavItem>
-              <Link className='nav-link' to="/technologies">Technologies</Link>
+              <Link className='nav-link' to="/technologies" onClick={() => setTimeout(() => { setIsOpen(false); }, 150)} >Technologies</Link>
             </NavItem>
             <NavItem>
-              <Link className='nav-link' to="/contact">Contact</Link>
+              <Link className='nav-link' to="/contact" onClick={() => setTimeout(() => { setIsOpen(false); }, 150)} >Contact</Link>
             </NavItem>
           </Nav>
           <NavbarText>
@@ -45,8 +43,8 @@ const NavBar = ({ user }) => {
           </NavbarText>
           <NavbarText>
             {user
-              ? <Button id="aboutBtn" onClick={signOutUser}>Log Out</Button>
-              : <Button id="aboutBtn" onClick={signInUser}>Sign In</Button>
+              ? <Button id="aboutBtn" onClick={signOutUser}>Sign Out</Button>
+              : <Button id="aboutBtn" onClick={signInUser}>Share Your Info</Button>
             }
           </NavbarText>
         </Collapse>

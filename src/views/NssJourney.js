@@ -8,7 +8,7 @@ export default function NssJourney() {
     <section>
       <div className="head">
         <header className="title" id="tech">My Learning Journey in NSS</header>
-        <p className="nssJourneyContent">I became fascinated with learning web development and decided to join the Web Developer Bootcamp offered by the Nashville Software School in January 2021. I wanted to keep track of my progress during the course of study. I spent a couple of hours at the beginning of each month to build a journal site to log my daily school activity. Click the monthly journals below to go to the desired site.</p>
+        <p className="nssJourneyContent">I became fascinated with learning web development and decided to join the Web Developer Bootcamp offered by the Nashville Software School in January 2021. I wanted to keep track of my progress during the course of study. I spent a couple of hours at the beginning of each month to build a journal site to log my daily school activity. Click the monthly journals below to go to the desired site. (Google Login is required on some sites to review the website)</p>
       </div>
       <VerticalTimeline className='vertical-timeline vertical-timeline-custom-line'>
         <VerticalTimelineElement
