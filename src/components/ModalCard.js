@@ -20,7 +20,7 @@ const ModalCard = ({
   return (
     <div>
       <Button className="mt-4" id='projectBtn' onClick={toggle}>View {title}</Button>
-      <Modal isOpen={modal} toggle={toggle} size="lg">
+      <Modal className="modalCard" isOpen={modal} toggle={toggle} size="lg">
         <ModalHeader toggle={toggle}>{title}</ModalHeader>
         <CardImg className='modalImg' src={screenshot} alt={title} />
         <ModalBody>{readMore ? description : `${description.substring(0, 150)}...`
