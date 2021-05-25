@@ -26,6 +26,10 @@ nav.navbar {
   color: $favColor;
 }
 
+.fa-hamburger:hover {
+  color: #777777;
+}
+
 #close {
   font-size: x-large;
 }
@@ -53,7 +57,7 @@ div#userCard.card {
 .aboutMe {
   height: 80vh;
   display: flex;
-  margin-top: 5%;
+  margin-top: 2%;
   flex-direction: column;
   font-weight: bold;
 }
@@ -142,6 +146,7 @@ div.react-card-back {
 ul.introduction-back {
   text-align: left;
   list-style: none;
+  padding: 5%
 }
 
 .splitMain {
@@ -220,6 +225,10 @@ h3.vertical-timeline-element-title {
   color: #9A7B4F;
   margin-top: 2%;
   font-size: 1.1rem;
+}
+
+.journalImg:hover {
+  transform: scale(1.1);
 }
 // Project Page
 div.projectsContainer {
@@ -323,14 +332,22 @@ div.contactInfo {
 }
 
 .contactImg {
-  max-width: 400px;
   padding: 2%;
   height: 90vh;
   object-fit: fill;
 }
 
+.picture {
+  width: 50%;
+}
+
 .img1 {
-  width: 300px;
+  width: 40%;
+}
+
+.img2 {
+  width: 60%;
+  margin: 0;
 }
 
 i.fab {
@@ -341,6 +358,15 @@ i.fab {
 i.far {
   font-size: 5rem;
   color: $favColor;
+}
+
+i.fab:hover {
+  color: #777777;
+}
+
+
+i.far:hover {
+  color: #777777;
 }
 
 p.icon {
@@ -355,19 +381,21 @@ div.picture {
 a.navbar-brand {
   color: $favColor;
   font-weight: bold;
+  font-size: 1.5rem;
 }
 
 a.navbar-brand:hover {
-  color: $secondaryColor;
+  color: #777777;
 }
 
 a.nav-link {
   color: $favColor;
   font-weight: bold;
+  font-size: 1.2rem;
 }
 
 a.nav-link:hover {
-  color: $secondaryColor;
+  color: #777777;
 }
 
 #school {
@@ -396,6 +424,9 @@ a.nav-link:hover {
   }
   main.contactSplit {
     justify-content: center;
+  }
+  div.picture {
+    width: 100%;
   }
 }
 @media screen and (max-width: 800px) {
@@ -471,9 +502,6 @@ a.nav-link:hover {
   }
   main.contactSplit {
     padding: 0 10%;
-  }
-  div.picture {
-    width: 100%;
   }
   img.contactImg {
     width: 100%;

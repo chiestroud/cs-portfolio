@@ -35,10 +35,10 @@ export default function about() {
           <div className="splitMain">
             <p className="introduction">Here are some of the things I like to do during my free time.</p>
             <ul className="introduction-back">
-              <li><i className="fas fa-car-side mr-1"></i>Easy going interactive activities: computer games, sudoku,  jigsaw puzzles, etc.</li>
-              <li><i className="fas fa-car-side mr-1"></i>Watching movies (thriller, action, and horror)</li>
-              <li><i className="fas fa-car-side mr-1"></i>Finding new restaurants</li>
-              <li><i className="fas fa-car-side mr-1"></i>Driving the most beautiful car in the world. This may be a biased opinion... (see picture)</li>
+              <li><i className="fas fa-car-side mr-2"></i>Easy going interactive activities: computer games, sudoku,  jigsaw puzzles, etc.</li>
+              <li><i className="fas fa-car-side mr-2"></i>Watching movies (thriller, action, and horror)</li>
+              <li><i className="fas fa-car-side mr-2"></i>Finding new restaurants</li>
+              <li><i className="fas fa-car-side mr-2"></i>Driving the most beautiful car in the world. This may be a biased opinion... (see picture)</li>
             </ul>
             <Button id="aboutBtn" onClick={handleClick}>Go Back</Button>
             </div>
