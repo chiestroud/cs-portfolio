@@ -18,8 +18,9 @@ body {
   background: #f2f2f2;
 }
 
-nav.navbar {
+nav.navbar.navbar-expand-lg.fixed-top {
   background-color: #f2f2f2;
+  border-bottom: 1px solid black;
 }
 
 .fa-hamburger {
@@ -179,7 +180,6 @@ ul.introduction-back {
   border-radius: 45%;
   color: #fff;
 }
-
 
 #aboutBtn {
   background-color: #48494B;
