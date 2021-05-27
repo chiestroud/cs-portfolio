@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import ReactCardFlip from 'react-card-flip';
 import { Button } from 'reactstrap';
+import { motion } from 'framer-motion';
 
 export default function about() {
   const [isFlipped, setIsFlipped] = useState(false);
@@ -12,8 +13,12 @@ export default function about() {
   };
 
   return (
-    <section className="aboutMe">
-      <header className="title about">About Me</header>
+      <motion.section
+        initial={{ x: '200vw' }}
+        animate={{ x: 0 }}
+        transition={{ type: 'spring', duration: 1 }}
+        className="aboutMe">
+      <header className="about">About Me</header>
       <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
         <div className="mainContainer">
           <div className="splitMain">
@@ -45,6 +50,6 @@ export default function about() {
           </div>
         }
       </ReactCardFlip>
-    </section>
+    </motion.section>
   );
 }

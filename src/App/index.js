@@ -3,7 +3,6 @@ import 'firebase/auth';
 import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
-import Footer from '../components/Footer';
 import NavBar from '../components/NavBar';
 import { addUser, getSingleUser } from '../helpers/data/userData';
 import Routes from '../helpers/Routes';
@@ -45,7 +44,6 @@ function App({
         setTechnologies={setTechnologies}
         setTechForm={setTechForm}
       />
-      <Footer />
     </Router>
   );
 }
