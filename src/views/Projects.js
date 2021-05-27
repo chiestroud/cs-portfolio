@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Button } from 'reactstrap';
 import PropTypes from 'prop-types';
+import { motion } from 'framer-motion';
 import ProjectCards from '../components/ProjectCards';
 import { getProjects } from '../helpers/data/projectData';
 import ProjectForm from './ProjectForm';
@@ -19,7 +20,11 @@ export default function Projects({ user }) {
   };
 
   return (
-    <main>
+    <motion.main
+      initial={{ x: '200vw' }}
+      animate={{ x: 0 }}
+      transition={{ type: 'spring', duration: 1 }}
+    >
       {(user && user.uid === firebaseConfig.adminId)
       && <div>
       {!showForm
@@ -46,7 +51,7 @@ export default function Projects({ user }) {
           ))}
         </div>
       </section>
-    </main>
+    </motion.main>
   );
 }
 

@@ -1,9 +1,14 @@
 /* eslint-disable max-len */
 import React from 'react';
+import { motion } from 'framer-motion';
 
 export default function Contact() {
   return (
-    <main className="contactSplit">
+    <motion.main
+      initial={{ x: '200vw' }}
+      animate={{ x: 0 }}
+      transition={{ type: 'spring', duration: 1 }}
+      className="contactSplit">
       <section className="contactContainer">
         <div className="head">
           <header className="title">Contact Info</header>
@@ -18,6 +23,6 @@ export default function Contact() {
         <img className="contactImg img1" src="https://lh3.googleusercontent.com/O1JD24y5Wf8cc9JUZa2c_ZPhGJGddAWuO7WVgOqHkpgA54Qy9xsnbh5_fVt8oJs1Fdt5U5pXPt6MznR9ENGd3WhYlRO22NOyqZQZQfDa5H6aa7UqylQJVV6Zqi353MuT3axcKiVbKoU=w2400" alt="kyoto" />
         <img className="contactImg img2" src="https://lh3.googleusercontent.com/DhQdaeiBajvefX0IaSzvpHgiFJhTQ75_UGme0vnUHpsaT4Cn8acVnI2PD-xxTHRMJ5LIX1iJNCBBaJ-2YsDHwYXRwDdOB2eHQ-DqijYQ-CEmx-guxWfdxXTjvoxu0Mb7nTK0Wuk8POc=w2400" alt="kyoto" />
       </div>
-    </main>
+    </motion.main>
   );
 }

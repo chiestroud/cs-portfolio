@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Button } from 'reactstrap';
 import PropTypes from 'prop-types';
+import { motion } from 'framer-motion';
 import TechnologyCards from '../components/TechnologyCards';
 import { getTechnologies } from '../helpers/data/technologyData';
 import TechnologyForm from './TechnologyForm';
@@ -26,7 +27,11 @@ export default function Technologies({ user }) {
   };
 
   return (
-    <main>
+    <motion.main
+      initial={{ x: '200vw' }}
+      animate={{ x: 0 }}
+      transition={{ type: 'spring', duration: 1 }}
+    >
       {(user && user.uid === firebaseConfig.adminId)
         && <div>
       {!techForm
@@ -62,7 +67,7 @@ export default function Technologies({ user }) {
           ))}
         </div>
       }
-    </main>
+    </motion.main>
   );
 }
 

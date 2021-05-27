@@ -1,11 +1,16 @@
 /* eslint-disable max-len */
 import React from 'react';
+import { motion } from 'framer-motion';
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 
 export default function NssJourney() {
   return (
-    <section>
+    <motion.section
+      initial={{ x: '200vw' }}
+      animate={{ x: 0 }}
+      transition={{ type: 'spring', duration: 1 }}
+    >
       <div className="head">
         <header className="title" id="tech">My Learning Journey in NSS</header>
         <p className="nssJourneyContent">I became fascinated with learning web development and decided to join the Web Developer Bootcamp offered by the Nashville Software School in January 2021. I wanted to keep track of my progress during the course of study. I spent a couple of hours at the beginning of each month to build a journal site to log my daily school activity. Click the monthly journals below to go to the desired site. (Google Login is required on some sites to review the website)</p>
@@ -72,7 +77,7 @@ export default function NssJourney() {
       >
         <div className="vertical-container">
           <h3 className="vertical-timeline-element-title">March 2021</h3>
-          <a className='journalImg' href="https://cs-journal-nss.netlify.app/#" target="_blank" rel="noreferrer"><img className="journalImg" src="https://lh3.googleusercontent.com/YTrz51MIfDjrlnlisw8VFuUwuH9rwQa_XQlBigEC5xOj5swndjqxHwG9oI-bIomNLNIbrsWJ8QCMYcOTb7c4bHaigH0yspCldV7l4WPp8D0hUhU2ZLq0pelpMumtK2CVNzVD_HocWyE=w2400"/></a>
+          <a className='journalImg' href="https://cs-journal-nss.netlify.app/#" target="_blank" rel="noreferrer"><img className="journalImg" src="https://lh3.googleusercontent.com/s-1ARkTuIlOiL_kFrYHYPTALIPYFdLhckGpoUwrfOAbxbF-UiTDy1OalphlCdaJl7F2MjbOGSegwE0pKY-xBTioFfjc7kL2371tB5lGryMK4GgqJbawf-kNN1ruSi-4MxinkCmdAgXU=w2400"/></a>
           <p>In March, I typed all my journal in json file and uploaded the file to Firebase. All the journal data displayed on the page is fetched from Firebase&apos;s database</p>
         </div>
       </VerticalTimelineElement>
@@ -117,6 +122,6 @@ export default function NssJourney() {
         icon={<i id="school" className="fas fa-school"></i>}
       />
       </VerticalTimeline>
-    </section>
+    </motion.section>
   );
 }

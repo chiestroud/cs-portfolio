@@ -22,19 +22,19 @@ const NavBar = ({ user }) => {
         <NavbarToggler onClick={() => setIsOpen(isOpen ? false : 'isOpen')}>{isOpen ? <i id="close" className="far fa-window-close"></i> : <i className="fas fa-hamburger"></i>}</NavbarToggler>
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
-            <NavItem>
+            <NavItem className='mr-3'>
               <Link className='nav-link' to="/about" onClick={() => setTimeout(() => { setIsOpen(false); }, 150)} >About</Link>
             </NavItem>
-            <NavItem>
+            <NavItem className='mr-3'>
               <Link className='nav-link' to="/nss" onClick={() => setTimeout(() => { setIsOpen(false); }, 150)} >NSS Journey</Link>
             </NavItem>
-            <NavItem>
+            <NavItem className='mr-3'>
               <Link className='nav-link' to="/projects" onClick={() => setTimeout(() => { setIsOpen(false); }, 150)} >Projects</Link>
             </NavItem>
-            <NavItem>
+            <NavItem className='mr-3'>
               <Link className='nav-link' to="/technologies" onClick={() => setTimeout(() => { setIsOpen(false); }, 150)} >Technologies</Link>
             </NavItem>
-            <NavItem>
+            <NavItem className='mr-3'>
               <Link className='nav-link' to="/contact" onClick={() => setTimeout(() => { setIsOpen(false); }, 150)} >Contact</Link>
             </NavItem>
           </Nav>
@@ -44,7 +44,7 @@ const NavBar = ({ user }) => {
           <NavbarText>
             {user
               ? <Button id="aboutBtn" onClick={signOutUser}>Sign Out</Button>
-              : <Button id="aboutBtn" onClick={signInUser}>Share Your Info</Button>
+              : <mButton id="aboutBtn" onClick={signInUser}>Share Your Info</mButton>
             }
           </NavbarText>
         </Collapse>
