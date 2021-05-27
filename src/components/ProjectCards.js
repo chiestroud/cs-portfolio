@@ -35,9 +35,9 @@ export default function ProjectCards({
       key={firebaseKey} id={firebaseKey}>
       {!editing
         ? <CardBody>
-            <CardTitle tag='h4'>{title}</CardTitle>
             <CardImg className='mx-auto d-block' id='projectImg' src={screenshot} alt={title} />
           <ModalCard title={title} description={description} githubUrl={githubUrl} url={url} screenshot={screenshot} technologiesUsed={technologiesUsed}/>
+            <CardTitle tag='h4'>{title}</CardTitle>
           </CardBody>
         : ''
       }

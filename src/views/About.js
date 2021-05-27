@@ -14,8 +14,8 @@ export default function about() {
 
   return (
       <motion.section
-        initial={{ x: '200vw' }}
-        animate={{ x: 0 }}
+        initial={{ y: '200vw' }}
+        animate={{ y: 0 }}
         transition={{ type: 'spring', duration: 1 }}
         className="aboutMe">
       <header className="about">About Me</header>

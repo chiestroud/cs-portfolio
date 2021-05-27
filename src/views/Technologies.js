@@ -28,8 +28,8 @@ export default function Technologies({ user }) {
 
   return (
     <motion.main
-      initial={{ x: '200vw' }}
-      animate={{ x: 0 }}
+      initial={{ y: '200vw' }}
+      animate={{ y: 0 }}
       transition={{ type: 'spring', duration: 1 }}
     >
       {(user && user.uid === firebaseConfig.adminId)

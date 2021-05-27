@@ -7,8 +7,8 @@ import 'react-vertical-timeline-component/style.min.css';
 export default function NssJourney() {
   return (
     <motion.section
-      initial={{ x: '200vw' }}
-      animate={{ x: 0 }}
+      initial={{ y: '200vw' }}
+      animate={{ y: 0 }}
       transition={{ type: 'spring', duration: 1 }}
     >
       <div className="head">

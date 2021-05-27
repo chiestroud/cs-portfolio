@@ -263,6 +263,7 @@ h3.vertical-timeline-element-title {
 .journalImg:hover {
   transform: scale(1.1);
 }
+
 // Project Page
 div.projectsContainer {
   display: flex;
@@ -274,9 +275,8 @@ div.projectsContainer {
 
 div.card {
   flex-basis: 25%;
-  background-color: #ebecf0;
+  background-color: black;
   border: #808080 solid 5px;
-  border-radius:50%;
   height: 450px;
 }
 
