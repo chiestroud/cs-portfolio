@@ -6,6 +6,7 @@ import {
 import TechnologyForm from '../views/TechnologyForm';
 import { deleteTechnology } from '../helpers/data/technologyData';
 import firebaseConfig from '../helpers/apiKeys';
+import NoImage from '../assets/noimage.jpg';
 
 export default function TechnologyCards({
   firebaseKey,
@@ -23,9 +24,13 @@ export default function TechnologyCards({
       deleteTechnology(firebaseKey).then((technologyArray) => setTechnologies(technologyArray));
     }
   };
+  const addDefault = (e) => {
+    e.target.src = NoImage;
+  };
+
   return (
       <Card key={firebaseKey} className='techCard' >
-      <CardImg id="technologyImg" top width="100%" src={logo} alt={technologyName} />
+      <CardImg id="technologyImg" top width="100%" src={logo} alt={technologyName} onError={addDefault}/>
       <CardText className='technology-name'>{technologyName}</CardText>
       {(user && user.uid === firebaseConfig.adminId)
         && <div>
