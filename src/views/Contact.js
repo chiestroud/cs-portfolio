@@ -5,9 +5,9 @@ import { motion } from 'framer-motion';
 export default function Contact() {
   return (
     <motion.main
-      initial={{ y: '200vw' }}
+      initial={{ y: '150vh' }}
       animate={{ y: 0 }}
-      transition={{ type: 'spring', duration: 1 }}
+      transition={{ duration: 1 }}
       className="contactSplit">
       <section className="contactContainer">
         <div className="head">

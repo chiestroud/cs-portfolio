@@ -19,7 +19,7 @@ const ModalCard = ({
 
   return (
     <div>
-      <Button className="mt-4" id='projectBtn' onClick={toggle}>View {title}</Button>
+      <Button className="mt-4" id='viewBtn' onClick={toggle}>View {title}</Button>
       <Modal className="modalCard" isOpen={modal} toggle={toggle} size="lg">
         <ModalHeader toggle={toggle}>{title}</ModalHeader>
         <CardImg className='modalImg' src={screenshot} alt={title} />
