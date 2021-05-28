@@ -23,7 +23,6 @@ export default function TechnologyCards({
       deleteTechnology(firebaseKey).then((technologyArray) => setTechnologies(technologyArray));
     }
   };
-
   return (
       <Card key={firebaseKey} className='techCard' >
       <CardImg id="technologyImg" top width="100%" src={logo} alt={technologyName} />

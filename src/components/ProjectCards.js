@@ -34,10 +34,12 @@ export default function ProjectCards({
       className='card m-5 text-center marginLeft'
       key={firebaseKey} id={firebaseKey}>
       {!editing
-        ? <CardBody>
-            <CardTitle tag='h4'>{title}</CardTitle>
-            <CardImg className='mx-auto d-block' id='projectImg' src={screenshot} alt={title} />
-          <ModalCard title={title} description={description} githubUrl={githubUrl} url={url} screenshot={screenshot} technologiesUsed={technologiesUsed}/>
+        ? <CardBody id='cardDisplay'>
+          <CardImg className='mx-auto d-block' id='projectImg' src={screenshot} alt={title} />
+          <div className='hiddenModal'>
+            <CardTitle className='hidden' tag='h4'>{title}</CardTitle>
+            <ModalCard title={title} description={description} githubUrl={githubUrl} url={url} screenshot={screenshot} technologiesUsed={technologiesUsed}/>
+          </div>
           </CardBody>
         : ''
       }

@@ -7,9 +7,9 @@ import 'react-vertical-timeline-component/style.min.css';
 export default function NssJourney() {
   return (
     <motion.section
-      initial={{ x: '200vw' }}
-      animate={{ x: 0 }}
-      transition={{ type: 'spring', duration: 1 }}
+      initial={{ y: '150vh' }}
+      animate={{ y: 0 }}
+      transition={{ duration: 1 }}
     >
       <div className="head">
         <header className="title" id="tech">My Learning Journey in NSS</header>

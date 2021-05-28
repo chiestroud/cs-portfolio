@@ -12,8 +12,8 @@ export default function Home() {
         <header className="title"><Typist>Chie Stroud</Typist><Typist.Delay ms={500} /></header>
         <h1 className="jobTitle">Full Stack Web Developer</h1>
         <div className="btnContainer">
-          <Button tag={Link} to='./about' id='btn'>About Me</Button>
-          <Button tag={Link} to='./contact' id='btn'>Contact</Button>
+          <Button tag={Link} to='./about' id='about'>About Me</Button>
+          <Button tag={Link} to='./contact' id='about'>Contact</Button>
         </div>
       </section>
       <Footer />

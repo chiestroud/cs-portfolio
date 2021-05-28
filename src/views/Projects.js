@@ -21,21 +21,10 @@ export default function Projects({ user }) {
 
   return (
     <motion.main
-      initial={{ x: '200vw' }}
-      animate={{ x: 0 }}
-      transition={{ type: 'spring', duration: 1 }}
+      initial={{ y: '200vh' }}
+      animate={{ y: 0 }}
+      transition={{ duration: 1 }}
     >
-      {(user && user.uid === firebaseConfig.adminId)
-      && <div>
-      {!showForm
-        ? <Button color='info' onClick={handleClick}>Add Project</Button>
-        : <div>
-          <Button color='info' onClick={handleClick}>Close Form</Button>
-          <ProjectForm setProjects={setProjects} setShowForm={setShowForm} />
-        </div>
-        }
-        </div>
-      }
       <section>
         <div className="head">
           <header className="title">Projects</header>
@@ -50,6 +39,17 @@ export default function Projects({ user }) {
             />
           ))}
         </div>
+        {(user && user.uid === firebaseConfig.adminId)
+      && <div className='addBtn'>
+      {!showForm
+        ? <Button color='info' onClick={handleClick}>Add Project</Button>
+        : <div>
+          <Button color='info' onClick={handleClick}>Close Form</Button>
+          <ProjectForm setProjects={setProjects} setShowForm={setShowForm} />
+        </div>
+        }
+        </div>
+      }
       </section>
     </motion.main>
   );

@@ -28,20 +28,10 @@ export default function Technologies({ user }) {
 
   return (
     <motion.main
-      initial={{ x: '200vw' }}
-      animate={{ x: 0 }}
-      transition={{ type: 'spring', duration: 1 }}
+      initial={{ y: '150vh' }}
+      animate={{ y: 0 }}
+      transition={{ duration: 1 }}
     >
-      {(user && user.uid === firebaseConfig.adminId)
-        && <div>
-      {!techForm
-        ? <Button color='info' onClick={handleTechClick}>Add Technology</Button>
-        : <div>
-          <Button color='info' onClick={handleTechClick}>Close Form</Button>
-          <TechnologyForm setTechnologies={setTechnologies} setTechForm={setTechForm}/>
-          </div>}
-      </div>
-      }
       <div className="head">
         <header id="tech" className="title">Technologies</header>
       </div>
@@ -57,6 +47,16 @@ export default function Technologies({ user }) {
             />
           ))}
         </div>
+        {(user && user.uid === firebaseConfig.adminId)
+        && <div>
+      {!techForm
+        ? <Button color='info' onClick={handleTechClick}>Add Technology</Button>
+        : <div>
+          <Button color='info' onClick={handleTechClick}>Close Form</Button>
+          <TechnologyForm setTechnologies={setTechnologies} setTechForm={setTechForm}/>
+          </div>}
+      </div>
+      }
       </section>
       {(user && user.uid === firebaseConfig.adminId)
         && <div className="secret">
