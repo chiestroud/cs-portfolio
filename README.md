@@ -14,7 +14,7 @@ My name is Chie Stroud and I'm a full stack software developer. Welcome to my po
 </p>
 
 ## Loom Video
-https://www.loom.com/share/b9ab65894f4b425da9d1b0e66ffe665c
+https://www.loom.com/share/f31c8159618248629e4735816a4ef1c3
 
 ## Technologies used to build this portfolio
 HTML / SCSS / JavaScript / React
