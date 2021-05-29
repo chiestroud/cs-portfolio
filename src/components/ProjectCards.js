@@ -36,34 +36,41 @@ export default function ProjectCards({
       key={firebaseKey} id={firebaseKey}>
       {!editing
         ? <CardBody id='cardDisplay'>
-          <CardImg className='mx-auto d-block' id='projectImg' src={screenshot} alt={title} />
-          <div className='hiddenModal'>
-            <CardTitle className='hidden' tag='h4'>{title}</CardTitle>
-            <ModalCard title={title} description={description} githubUrl={githubUrl} url={url} screenshot={screenshot} loom={loom} technologiesUsed={technologiesUsed}/>
-          </div>
+            <CardImg className='mx-auto d-block' id='projectImg' src={screenshot} alt={title} />
+            <div className='hiddenModal'>
+              <CardTitle className='hidden' tag='h4'>{title}</CardTitle>
+            <ModalCard
+              title={title}
+              description={description}
+              githubUrl={githubUrl}
+              url={url}
+              screenshot={screenshot}
+              loom={loom}
+              technologiesUsed={technologiesUsed} />
+            </div>
           </CardBody>
         : ''
       }
       {(user && user.uid === firebaseConfig.adminId)
         ? <div className='btnContainer'>
-        <Button color='success' onClick={() => handleClick('edit')}>
-          {editing ? 'Close Form' : 'Update Project'}</Button>
-        {editing
-          && <ProjectForm key={firebaseKey}
-            firebaseKey={firebaseKey}
-            description={description}
-            githubUrl={githubUrl}
-            screenshot={screenshot}
-            technologiesUsed={technologiesUsed}
-            title={title}
-            url={url}
-            setProjects={setProjects}
-            available={available}
-            setEditing={setEditing}
-            loom={loom}
-          />}
-        <Button color='danger' onClick={() => handleClick('delete')}>Delete</Button>
-      </div>
+            <Button color='success' onClick={() => handleClick('edit')}>
+            {editing ? 'Close Form' : 'Update Project'}</Button>
+              {editing
+                && <ProjectForm key={firebaseKey}
+                  firebaseKey={firebaseKey}
+                  description={description}
+                  githubUrl={githubUrl}
+                  screenshot={screenshot}
+                  technologiesUsed={technologiesUsed}
+                  title={title}
+                  url={url}
+                  setProjects={setProjects}
+                  available={available}
+                  setEditing={setEditing}
+                  loom={loom}
+                />}
+              <Button color='danger' onClick={() => handleClick('delete')}>Delete</Button>
+          </div>
         : ''}
     </Card>
   );

@@ -17,6 +17,7 @@ export default function TechnologyCards({
   user
 }) {
   const [editing, setEditing] = useState(false);
+
   const handleClick = (type) => {
     if (type === 'edit') {
       setEditing((prevState) => !prevState);
@@ -24,33 +25,34 @@ export default function TechnologyCards({
       deleteTechnology(firebaseKey).then((technologyArray) => setTechnologies(technologyArray));
     }
   };
+
   const addDefault = (e) => {
     e.target.src = NoImage;
   };
 
   return (
-      <Card key={firebaseKey} className='techCard' >
+    <Card key={firebaseKey} className='techCard'>
       <CardImg id="technologyImg" top width="100%" src={logo} alt={technologyName} onError={addDefault}/>
       <CardText className='technology-name'>{technologyName}</CardText>
-      {(user && user.uid === firebaseConfig.adminId)
-        && <div>
-        <Button color="primary" size="sm" onClick={() => handleClick('edit')}>
-          {editing ? 'Close' : 'Edit'}
-        </Button>{' '}
-        {editing
-          && <TechnologyForm key={firebaseKey}
-          firebaseKey={firebaseKey}
-          logo={logo}
-          technologyName={technologyName}
-          setEditing={setEditing}
-          setTechForm={setTechForm}
-          setTechnologies={setTechnologies}
-        />
+        {(user && user.uid === firebaseConfig.adminId)
+          && <div>
+              <Button color="primary" size="sm" onClick={() => handleClick('edit')}>
+                {editing ? 'Close' : 'Edit'}
+              </Button>{' '}
+                {editing
+                  && <TechnologyForm key={firebaseKey}
+                  firebaseKey={firebaseKey}
+                  logo={logo}
+                  technologyName={technologyName}
+                  setEditing={setEditing}
+                  setTechForm={setTechForm}
+                  setTechnologies={setTechnologies}
+                />
+                }
+              <Button color="danger" size="sm" onClick={() => handleClick('delete')}>Delete</Button>
+          </div>
         }
-      <Button color="danger" size="sm" onClick={() => handleClick('delete')}>Delete</Button>
-      </div>
-      }
-      </Card>
+    </Card>
   );
 }
 
