@@ -12,6 +12,7 @@ export default function ProjectForm({
   screenshot,
   technologiesUsed,
   title,
+  loom,
   url,
   setProjects,
   available,
@@ -26,7 +27,8 @@ export default function ProjectForm({
     githubUrl: githubUrl || '',
     screenshot: screenshot || '',
     url: url || '',
-    technologiesUsed: technologiesUsed || ''
+    technologiesUsed: technologiesUsed || '',
+    loom: loom || ''
   });
 
   const handleSubmit = (e) => {
@@ -87,6 +89,16 @@ export default function ProjectForm({
         />
       </FormGroup>
       <FormGroup>
+        <Label for="loom">Loom Video</Label>
+        <Input
+          type="url"
+          name="loom"
+          id="loom"
+          value={project.loom}
+          onChange={handleInputChange}
+        />
+      </FormGroup>
+      <FormGroup>
         <Label for="technologies">Technologies Used</Label>
         <Input
           type="text"
@@ -143,6 +155,7 @@ ProjectForm.propTypes = {
   screenshot: PropTypes.string,
   technologiesUsed: PropTypes.string,
   title: PropTypes.string,
+  loom: PropTypes.string,
   url: PropTypes.string,
   setProjects: PropTypes.func,
   available: PropTypes.any,

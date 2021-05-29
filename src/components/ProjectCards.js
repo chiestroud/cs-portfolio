@@ -16,6 +16,7 @@ export default function ProjectCards({
   technologiesUsed,
   title,
   url,
+  loom,
   setProjects,
   available,
   user
@@ -38,7 +39,7 @@ export default function ProjectCards({
           <CardImg className='mx-auto d-block' id='projectImg' src={screenshot} alt={title} />
           <div className='hiddenModal'>
             <CardTitle className='hidden' tag='h4'>{title}</CardTitle>
-            <ModalCard title={title} description={description} githubUrl={githubUrl} url={url} screenshot={screenshot} technologiesUsed={technologiesUsed}/>
+            <ModalCard title={title} description={description} githubUrl={githubUrl} url={url} screenshot={screenshot} loom={loom} technologiesUsed={technologiesUsed}/>
           </div>
           </CardBody>
         : ''
@@ -59,6 +60,7 @@ export default function ProjectCards({
             setProjects={setProjects}
             available={available}
             setEditing={setEditing}
+            loom={loom}
           />}
         <Button color='danger' onClick={() => handleClick('delete')}>Delete</Button>
       </div>
@@ -77,5 +79,6 @@ ProjectCards.propTypes = {
   url: PropTypes.string,
   available: PropTypes.any,
   setProjects: PropTypes.func,
-  user: PropTypes.any
+  user: PropTypes.any,
+  loom: PropTypes.string
 };

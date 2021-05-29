@@ -28,7 +28,7 @@ export default function Technologies({ user }) {
 
   return (
     <motion.main
-      initial={{ y: '150vh' }}
+      initial={{ y: '300vh' }}
       animate={{ y: 0 }}
       transition={{ duration: 1 }}
     >
