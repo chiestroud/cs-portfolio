@@ -14,7 +14,7 @@ export default function about() {
 
   return (
       <motion.section
-        initial={{ y: '150vh' }}
+        initial={{ y: '300vh' }}
         animate={{ y: 0 }}
         transition={{ duration: 1 }}
         className="aboutMe">
@@ -22,7 +22,7 @@ export default function about() {
       <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
         <div className="mainContainer">
           <div className="splitMain">
-            <p className="introduction">Hello, my name is Chie Stroud.</p>
+            <p className="introduction"><span className="mainTitle">Hello, my name is Chie Stroud.</span></p>
             <p className="introduction">I was born and raised in Kyoto, Japan. I lived in Japan most of my life until I moved to the US in 2016, and I am currently working for an automotive manufacturer as a part of the quality team. I am also a part time Web Development Bootcamp student at the Nashville Software School.</p>
             <p className="introduction">My desire to study programming started out of the blue when I began having thoughts on how to build a web application. While at work, I had ideas at random on how to make my job and life easier and questioned why so many things are still manually operated. I wondered if software development is a tool I could use or if it was something that was prohibitively difficult or expensive to implement. I started digging into online resources and I ended up getting hooked right away. This is the most interesting subject I have ever studied and I cannot get enough of it.</p>
             <p className="introduction">Software development is an endless journey of learning, problem solving, and creativity. This is why I love it so much.</p>

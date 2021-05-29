@@ -112,7 +112,7 @@ nav.navbar.navbar-expand-md.fixed-bottom {
   color: $favColor;
   letter-spacing: 14px;
   font-weight: bold;
-  padding-top: 13%;
+  padding-top: 11%;
 }
 
 .jobTitle {
@@ -136,7 +136,6 @@ div.btnContainer {
 }
 
 #about:hover {
-  background-color: $favColor;
   background-color: black;
 }
 
@@ -153,6 +152,10 @@ div.btnContainer {
   text-align: center;
 }
 
+.mainTitle {
+  font-size: 1.3rem;
+}
+
 .about {
   align-self: center;
   font-size: 4rem;
@@ -160,7 +163,7 @@ div.btnContainer {
   color: $favColor;
   letter-spacing: 14px;
   font-weight: bold;
-  padding-top: 10%;
+  padding-top: 8%;
 }
 
 div.react-card-front {
@@ -195,9 +198,8 @@ ul.introduction-back {
   align-items: center;
   justify-content: center;
   color: $favColor;
+  background-color: #e4e6e8;
   font-size: 1.2rem;
-  background-color: #ebecf0;
-  border: $favColor 2px solid;
 }
 
 .profileImg {
@@ -352,6 +354,10 @@ div.card.m-5.text-center.marginLeft {
   padding: 0;
 }
 
+.videoContainer {
+  height: 300px;
+}
+
 // Modal Btn
 
 #viewBtn {
@@ -370,6 +376,7 @@ div.card.m-5.text-center.marginLeft {
 }
 #btnModal:hover {
   background-color: #2B2D2F;
+  color: #ffffed;
 }
 
 // Technlogy Page
