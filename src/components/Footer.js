@@ -9,11 +9,11 @@ export default function Footer() {
   return (
     <div id="navContainer">
       <Navbar expand="md" fixed="bottom">
-          <Nav className="m-auto" navbar>
-            <NavItem>
+        <Nav className="m-auto" navbar>
+          <NavItem>
             Copyright &copy; Chie Stroud 2021
-            </NavItem>
-          </Nav>
+          </NavItem>
+        </Nav>
       </Navbar>
     </div>
   );

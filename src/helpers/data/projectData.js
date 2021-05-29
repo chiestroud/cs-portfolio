@@ -40,12 +40,3 @@ const deleteProject = (firebaseKey) => new Promise((resolve, reject) => {
 export {
   getProjects, addProjects, updateProject, deleteProject
 };
-
-// const addProjects = (project) => new Promise((resolve, reject) => {
-//   axios.post(`${dbUrl}/projects.json`, project)
-//     .then((response) => {
-//       const body = { firebaseKey: response.data.name };
-//       axios.patch(`${dbUrl}/projects/${response.data.name}.json`, body)
-//         .then(() => resolve(console.warn('project added', project)));
-//     }).catch((err) => reject(err));
-// });
