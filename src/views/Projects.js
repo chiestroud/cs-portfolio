@@ -30,7 +30,7 @@ export default function Projects({ user }) {
           <header className="title">Projects</header>
         </div>
         <div className='projectsContainer mt-2'>
-          {projects.map((project) => (
+          {projects.reverse().map((project) => (
             <ProjectCards key={project.firebaseKey}
               setProjects={setProjects}
               setShowForm={setShowForm}

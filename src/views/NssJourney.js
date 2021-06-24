@@ -114,6 +114,22 @@ export default function NssJourney() {
           </div>
         </VerticalTimelineElement>
         <VerticalTimelineElement
+          className="vertical-timeline-element--work"
+          contentStyle={{ background: '#dcdcdc', color: '#5b5b5b' }}
+          contentArrowStyle={{ borderRight: '7px solid  #dcdcdc' }}
+          date="June 2021"
+          iconStyle={{
+            background: '#aca18c', color: '#fff', display: 'flex', justifyContent: 'center', alignItems: 'center'
+          }}
+          icon={<i id="school" className="fas fa-school"></i>}
+        >
+          <div className="vertical-container">
+            <h3 className="vertical-timeline-element-title">June 2021</h3>
+            <a className='journalImg' href="https://cs-nss-journal-react.netlify.app/" target="_blank" rel="noreferrer"><img className="journalImg" src="https://lh3.googleusercontent.com/EpEws1ze76PhJLJzCoM186A9uP7kYaz74xCLBGwUu9uxuIIldmZ6tQ7jdyPRxFKKdbFur1ZYCplYy3eGxr-598d9G__KZIWMrY1b2HXQl5PcmkNs_e4wT871-ftfj4OfbHe8kwXAuYM=w2400"/></a>
+            <p>Added search function and dropdown list to react journal website. June was a busy month with Front End Capstone Project.</p>
+          </div>
+        </VerticalTimelineElement>
+        <VerticalTimelineElement
           contentStyle={{ background: '#dcdcdc', color: '5b5b5b' }}
           contentArrowStyle={{ borderRight: '7px solid  #dcdcdc' }}
           iconStyle={{
