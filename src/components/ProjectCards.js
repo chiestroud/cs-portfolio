@@ -31,8 +31,8 @@ export default function ProjectCards({
   };
 
   return (
-    <Card body
-      className='card m-5 text-center marginLeft'
+    <Card
+      className='card m-5 text-center marginLeft projectCont'
       key={firebaseKey} id={firebaseKey}>
       {!editing
         ? <CardBody id='cardDisplay'>
@@ -52,7 +52,7 @@ export default function ProjectCards({
         : ''
       }
       {(user && user.uid === firebaseConfig.adminId)
-        ? <div className='btnContainer'>
+        ? <div id="projectEdit" className='btnContainer'>
             <Button color='success' onClick={() => handleClick('edit')}>
             {editing ? 'Close Form' : 'Update Project'}</Button>
               {editing
