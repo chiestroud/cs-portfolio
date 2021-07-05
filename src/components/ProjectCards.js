@@ -31,7 +31,7 @@ export default function ProjectCards({
   };
 
   return (
-    <Card
+    <Card body
       className='card m-5 text-center marginLeft projectCont'
       key={firebaseKey} id={firebaseKey}>
       {!editing
